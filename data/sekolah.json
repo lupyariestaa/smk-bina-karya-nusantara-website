@@ -1,0 +1,65 @@
+{
+  "nama": "SMK Bina Karya Nusantara",
+  "namaSingkat": "SMK BKN",
+  "jenjang": "Sekolah Menengah Kejuruan (SMK)",
+  "status": "Swasta",
+  "akreditasi": "A (Unggul)",
+  "npsn": "20219876",
+  "tahunBerdiri": 2004,
+  "skPendirian": "No. 421.3/SK/2004",
+  "kurikulum": "Kurikulum Merdeka",
+  "waktuPenyelenggaraan": "Pagi (07.00 - 15.30 WIB)",
+  "kepalaSekolah": "Drs. Hendra Wijaya, M.Pd.",
+  "tagline": "Kompeten, Berkarakter, Berdaya Saing",
+  "slogan": "Bina Karya, Bangun Nusantara",
+  "maskot": "Elang Nusantara",
+  "warnaIdentitas": [
+    { "nama": "Navy", "hex": "#1E3A8A" },
+    { "nama": "Kuning Emas", "hex": "#F59E0B" }
+  ],
+  "deskripsiSingkat": "SMK Bina Karya Nusantara adalah sekolah menengah kejuruan yang berkomitmen menghasilkan lulusan yang kompeten, berkarakter, dan berdaya saing global melalui pendidikan vokasi berbasis kebutuhan dunia usaha dan dunia industri.",
+  "alamat": {
+    "jalan": "Jl. Raya Pendidikan No. 45, Kompleks Pendidikan Nusantara",
+    "kelurahan": "Sukamaju",
+    "kecamatan": "Cibalong",
+    "kabupaten": "Tasikmalaya",
+    "provinsi": "Jawa Barat",
+    "kodePos": "46185",
+    "koordinat": { "lat": -7.6285, "lng": 108.1234 },
+    "googleMapsUrl": "https://maps.google.com/?q=-7.6285,108.1234"
+  },
+  "kontak": {
+    "telepon": "(0265) 741-8890",
+    "whatsapp": "0812-3456-7890",
+    "email": "info@smkbinakaryanusantara.sch.id",
+    "emailHumas": "humas@smkbinakaryanusantara.sch.id",
+    "website": "https://www.smkbinakaryanusantara.sch.id"
+  },
+  "sosialMedia": [
+    {
+      "nama": "Instagram",
+      "handle": "@smkbinakaryanusantara",
+      "url": "https://instagram.com/smkbinakaryanusantara"
+    },
+    {
+      "nama": "Facebook",
+      "handle": "SMK Bina Karya Nusantara",
+      "url": "https://facebook.com/smkbinakaryanusantara"
+    },
+    {
+      "nama": "YouTube",
+      "handle": "SMK Bina Karya Nusantara TV",
+      "url": "https://youtube.com/@smkbinakaryanusantara"
+    },
+    {
+      "nama": "TikTok",
+      "handle": "@smkbkn.official",
+      "url": "https://tiktok.com/@smkbkn.official"
+    }
+  ],
+  "jamOperasional": [
+    { "hari": "Senin - Jumat", "jam": "07.00 - 15.30 WIB" },
+    { "hari": "Sabtu", "jam": "07.00 - 12.00 WIB (kegiatan tertentu)" },
+    { "hari": "Minggu & Hari Libur Nasional", "jam": "Tutup" }
+  ]
+}

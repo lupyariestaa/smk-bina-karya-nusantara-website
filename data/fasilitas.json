@@ -1,0 +1,107 @@
+[
+  {
+    "nama": "Ruang Kelas",
+    "jumlah": 36,
+    "kategori": "Akademik",
+    "keterangan": "Ber-AC, proyektor, smart TV",
+    "ikon": "classroom"
+  },
+  {
+    "nama": "Bengkel Praktik TKJ",
+    "jumlah": 3,
+    "kategori": "Laboratorium",
+    "keterangan": "Lab jaringan & server",
+    "ikon": "network"
+  },
+  {
+    "nama": "Lab Komputer RPL",
+    "jumlah": 4,
+    "kategori": "Laboratorium",
+    "keterangan": "40 PC per lab, koneksi internet",
+    "ikon": "code"
+  },
+  {
+    "nama": "Bengkel Otomotif",
+    "jumlah": 3,
+    "kategori": "Laboratorium",
+    "keterangan": "Lift, alat diagnosa modern",
+    "ikon": "car"
+  },
+  {
+    "nama": "Lab Akuntansi",
+    "jumlah": 2,
+    "kategori": "Laboratorium",
+    "keterangan": "Komputer akuntansi & perpajakan",
+    "ikon": "calculator"
+  },
+  {
+    "nama": "Studio Bisnis Digital",
+    "jumlah": 1,
+    "kategori": "Laboratorium",
+    "keterangan": "Setup konten kreator & live streaming",
+    "ikon": "megaphone"
+  },
+  {
+    "nama": "Perpustakaan",
+    "jumlah": 1,
+    "kategori": "Akademik",
+    "keterangan": "± 8.000 koleksi buku & e-book",
+    "ikon": "book"
+  },
+  {
+    "nama": "Aula / Hall",
+    "jumlah": 1,
+    "kategori": "Umum",
+    "keterangan": "Kapasitas 800 orang",
+    "ikon": "hall"
+  },
+  {
+    "nama": "Masjid / Musala",
+    "jumlah": 1,
+    "kategori": "Umum",
+    "keterangan": "Kapasitas 500 orang",
+    "ikon": "mosque"
+  },
+  {
+    "nama": "Lapangan Olahraga",
+    "jumlah": 3,
+    "kategori": "Olahraga",
+    "keterangan": "Futsal, basket, voli",
+    "ikon": "sport"
+  },
+  {
+    "nama": "Ruang UKS",
+    "jumlah": 1,
+    "kategori": "Umum",
+    "keterangan": "Dilengkapi tenaga medis",
+    "ikon": "health"
+  },
+  {
+    "nama": "Kantin",
+    "jumlah": 2,
+    "kategori": "Umum",
+    "keterangan": "Kantin sehat & kantin siswa",
+    "ikon": "food"
+  },
+  {
+    "nama": "Teaching Factory",
+    "jumlah": 1,
+    "kategori": "Laboratorium",
+    "keterangan": "Unit produksi terintegrasi",
+    "ikon": "factory"
+  },
+  {
+    "nama": "Area Parkir",
+    "jumlah": 2,
+    "kategori": "Umum",
+    "keterangan": "Parkir siswa & guru",
+    "ikon": "parking"
+  },
+  {
+    "nama": "Ruang BK",
+    "jumlah": 1,
+    "kategori": "Akademik",
+    "keterangan": "Bimbingan konseling",
+    "ikon": "counseling"
+  }
+]

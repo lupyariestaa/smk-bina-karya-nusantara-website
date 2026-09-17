@@ -1,0 +1,105 @@
+{
+  "tahunAjaran": "2025/2026",
+  "periode": "Januari - Juli 2025",
+  "statusPendaftaran": "Menampilkan informasi. Pendaftaran dilakukan melalui kanal resmi di luar website ini.",
+  "jalur": [
+    {
+      "nama": "Zonasi",
+      "deskripsi": "Bagi calon siswa yang berdomisili di sekitar lingkungan sekolah."
+    },
+    {
+      "nama": "Prestasi",
+      "deskripsi": "Bagi calon siswa dengan prestasi akademik maupun non-akademik."
+    },
+    {
+      "nama": "Reguler",
+      "deskripsi": "Jalur umum bagi seluruh calon siswa yang memenuhi persyaratan."
+    },
+    {
+      "nama": "Beasiswa",
+      "deskripsi": "Beasiswa prestasi, yatim piatu, kurang mampu (KIP)."
+    }
+  ],
+  "persyaratan": [
+    "Fotokopi Ijazah / Surat Keterangan Lulus (SKL)",
+    "Fotokopi Kartu Keluarga (KK)",
+    "Fotokopi Akta Kelahiran",
+    "Pas foto ukuran 3x4",
+    "Fotokopi rapor semester terakhir",
+    "Fotokopi KIP (bagi jalur beasiswa kurang mampu)"
+  ],
+  "alur": [
+    {
+      "tahap": 1,
+      "judul": "Informasi Pendaftaran",
+      "deskripsi": "Calon siswa membaca informasi jadwal dan persyaratan yang telah diumumkan."
+    },
+    {
+      "tahap": 2,
+      "judul": "Pengambilan Formulir",
+      "deskripsi": "Mengambil/mengunduh formulir pendaftaran melalui kanal resmi sekolah."
+    },
+    {
+      "tahap": 3,
+      "judul": "Melengkapi Berkas",
+      "deskripsi": "Melengkapi seluruh dokumen persyaratan yang diminta."
+    },
+    {
+      "tahap": 4,
+      "judul": "Penyerahan Berkas",
+      "deskripsi": "Menyerahkan berkas ke panitia PPDB di lokasi yang telah ditentukan."
+    },
+    {
+      "tahap": 5,
+      "judul": "Seleksi",
+      "deskripsi": "Panitia melakukan verifikasi dan seleksi sesuai jalur pendaftaran."
+    },
+    {
+      "tahap": 6,
+      "judul": "Pengumuman",
+      "deskripsi": "Hasil seleksi diumumkan melalui website dan kanal resmi sekolah."
+    },
+    {
+      "tahap": 7,
+      "judul": "Daftar Ulang",
+      "deskripsi": "Calon siswa yang diterima melakukan daftar ulang sesuai jadwal."
+    }
+  ],
+  "jadwal": [
+    { "tahap": "Sosialisasi & Informasi", "tanggal": "1 - 31 Januari 2025" },
+    { "tahap": "Pendaftaran Gelombang 1", "tanggal": "1 Februari - 30 April 2025" },
+    { "tahap": "Pendaftaran Gelombang 2", "tanggal": "1 Mei - 30 Juni 2025" },
+    { "tahap": "Seleksi & Verifikasi", "tanggal": "1 - 10 Juli 2025" },
+    { "tahap": "Pengumuman Hasil", "tanggal": "15 Juli 2025" },
+    { "tahap": "Daftar Ulang", "tanggal": "16 - 22 Juli 2025" }
+  ],
+  "biayaPendaftaran": "Gratis",
+  "kontak": {
+    "email": "ppdb@smkbinakaryanusantara.sch.id",
+    "whatsapp": "0812-3456-7890",
+    "telepon": "(0265) 741-8890"
+  },
+  "pengumuman": [
+    {
+      "id": "p-01",
+      "judul": "PPDB 2025/2026 Resmi Dibuka",
+      "tanggal": "2025-02-01",
+      "ringkasan": "Pendaftaran Peserta Didik Baru SMK Bina Karya Nusantara tahun ajaran 2025/2026 resmi dibuka untuk 4 jalur pendaftaran.",
+      "isi": "Pendaftaran Peserta Didik Baru (PPDB) SMK Bina Karya Nusantara tahun ajaran 2025/2026 resmi dibuka. Terdapat 4 jalur pendaftaran: Zonasi, Prestasi, Reguler, dan Beasiswa. Calon siswa dapat membaca persyaratan dan alur pendaftaran pada halaman ini. Pendaftaran dilakukan melalui kanal resmi sekolah."
+    },
+    {
+      "id": "p-02",
+      "judul": "Kuota Penerimaan Siswa Baru 2025/2026",
+      "tanggal": "2025-02-15",
+      "ringkasan": "Sekolah menyediakan 504 kursi untuk 6 program keahlian pada penerimaan siswa baru tahun ini.",
+      "isi": "SMK Bina Karya Nusantara menyediakan total 504 kursi penerimaan siswa baru untuk 6 program keahlian: TKJ, RPL, TKRO, TBSM, AKL, dan Bisnis Digital. Rincian kuota per jurusan dapat ditanyakan kepada panitia PPDB."
+    },
+    {
+      "id": "p-03",
+      "judul": "Jadwal Pengumuman Hasil Seleksi",
+      "tanggal": "2025-07-10",
+      "ringkasan": "Hasil seleksi PPDB akan diumumkan pada 15 Juli 2025 melalui website dan kanal resmi sekolah.",
+      "isi": "Hasil seleksi PPDB tahun ajaran 2025/2026 akan diumumkan pada tanggal 15 Juli 2025. Pengumuman dapat diakses melalui website resmi sekolah dan kanal sosial media resmi. Calon siswa yang dinyatakan diterima diharapkan melakukan daftar ulang pada 16 - 22 Juli 2025."
+    }
+  ]
+}

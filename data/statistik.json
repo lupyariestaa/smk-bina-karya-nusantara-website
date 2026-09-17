@@ -1,0 +1,23 @@
+{
+  "tenagaPendidik": {
+    "guruPnsPppk": 18,
+    "guruTetapYayasan": 34,
+    "guruTidakTetap": 12,
+    "tenagaKependidikan": 16,
+    "total": 80,
+    "guruBersertifikatPendidik": 62,
+    "guruS1": 60,
+    "guruS2": 8
+  },
+  "dataSiswa": [
+    { "tahunAjaran": "2022/2023", "pendaftar": 780, "diterima": 432, "siswaAktif": 1120 },
+    { "tahunAjaran": "2023/2024", "pendaftar": 850, "diterima": 468, "siswaAktif": 1180 },
+    { "tahunAjaran": "2024/2025", "pendaftar": 920, "diterima": 504, "siswaAktif": 1240 }
+  ],
+  "ringkasan": {
+    "rombonganBelajar": 36,
+    "rasioGuruSiswa": "1 : 15",
+    "jumlahJurusan": 6,
+    "siswaAktifTerbaru": 1240
+  }
+}

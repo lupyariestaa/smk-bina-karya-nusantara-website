@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "teknik-komputer-dan-jaringan",
+    "nama": "Teknik Komputer dan Jaringan",
+    "singkatan": "TKJ",
+    "bidang": "Teknologi Informasi",
+    "durasi": "4 Tahun",
+    "akreditasi": "A",
+    "ikon": "network",
+    "deskripsi": "Program keahlian yang membekali peserta didik dengan kompetensi instalasi jaringan, administrasi server, keamanan jaringan, dan konfigurasi perangkat telekomunikasi.",
+    "kompetensi": [
+      "Instalasi dan konfigurasi jaringan LAN/WAN",
+      "Administrasi server (Linux & Windows Server)",
+      "Keamanan jaringan dan firewall",
+      "Konfigurasi perangkat telekomunikasi",
+      "Troubleshooting jaringan",
+      "Implementasi Internet of Things (IoT)"
+    ],
+    "prospekKarier": [
+      "Network Engineer",
+      "IT Support",
+      "System Administrator",
+      "Network Security Analyst",
+      "Teknisi Telekomunikasi",
+      "Wirausaha di bidang jasa IT"
+    ],
+    "mataPelajaran": [
+      "Jaringan Dasar",
+      "Komunikasi Data",
+      "Administrasi Sistem Jaringan",
+      "Teknologi Layanan Jaringan",
+      "Keamanan Jaringan"
+    ],
+    "fasilitasPendukung": [
+      "3 lab jaringan & server",
+      "Perangkat router, switch, dan access point",
+      "Server fisik & virtual untuk praktik"
+    ]
+  },
+  {
+    "slug": "rekayasa-perangkat-lunak",
+    "nama": "Rekayasa Perangkat Lunak",
+    "singkatan": "RPL",
+    "bidang": "Teknologi Informasi",
+    "durasi": "4 Tahun",
+    "akreditasi": "A",
+    "ikon": "code",
+    "deskripsi": "Program keahlian yang fokus pada pemrograman web, mobile, pengelolaan basis data, dan pengembangan aplikasi berbasis project.",
+    "kompetensi": [
+      "Pemrograman web (frontend & backend)",
+      "Pemrograman aplikasi mobile",
+      "Desain & pengelolaan basis data",
+      "Pemodelan dan pengembangan perangkat lunak",
+      "Pengujian perangkat lunak",
+      "Penerapan UI/UX dasar"
+    ],
+    "prospekKarier": [
+      "Web Developer",
+      "Mobile Developer",
+      "Backend Developer",
+      "Database Administrator",
+      "Software Tester",
+      "Wirausaha di bidang software house"
+    ],
+    "mataPelajaran": [
+      "Pemrograman Dasar",
+      "Pemrograman Web dan Perangkat Bergerak",
+      "Pemodelan Perangkat Lunak",
+      "Basis Data",
+      "Pemrograman Berorientasi Objek"
+    ],
+    "fasilitasPendukung": [
+      "4 lab komputer (40 PC per lab)",
+      "Koneksi internet berkecepatan tinggi",
+      "Tools pengembangan modern"
+    ]
+  },
+  {
+    "slug": "teknik-kendaraan-ringan-otomotif",
+    "nama": "Teknik Kendaraan Ringan Otomotif",
+    "singkatan": "TKRO",
+    "bidang": "Teknologi Otomotif",
+    "durasi": "4 Tahun",
+    "akreditasi": "A",
+    "ikon": "car",
+    "deskripsi": "Program keahlian yang fokus pada perawatan dan perbaikan kendaraan ringan, meliputi sistem mesin, kelistrikan, dan chassis.",
+    "kompetensi": [
+      "Perawatan mesin kendaraan ringan",
+      "Sistem kelistrikan dan elektronika otomotif",
+      "Sistem pemindah tenaga dan chassis",
+      "Perawatan sistem suspensi dan kemudi",
+      "Diagnosa kerusakan dengan alat modern",
+      "Perawatan berkala kendaraan"
+    ],
+    "prospekKarier": [
+      "Mekanik Kendaraan Ringan",
+      "Teknisi Servis Resmi",
+      "Teknisi Kelistrikan Otomotif",
+      "Service Advisor",
+      "Wirausaha bengkel otomotif"
+    ],
+    "mataPelajaran": [
+      "Pekerjaan Dasar Otomotif",
+      "Pemeliharaan Mesin Kendaraan Ringan",
+      "Pemeliharaan Kelistrikan Kendaraan Ringan",
+      "Pemeliharaan Chassis & Pemindah Tenaga",
+      "Teknologi Dasar Otomotif"
+    ],
+    "fasilitasPendukung": [
+      "3 bengkel otomotif praktik",
+      "Lift kendaraan & alat diagnosa modern",
+      "Kendaraan praktik & trainer unit"
+    ]
+  },
+  {
+    "slug": "teknik-dan-bisnis-sepeda-motor",
+    "nama": "Teknik dan Bisnis Sepeda Motor",
+    "singkatan": "TBSM",
+    "bidang": "Teknologi Otomotif",
+    "durasi": "4 Tahun",
+    "akreditasi": "A",
+    "ikon": "motorcycle",
+    "deskripsi": "Program keahlian yang fokus pada perawatan sepeda motor konvensional dan injeksi, serta sistem kelistrikan sepeda motor.",
+    "kompetensi": [
+      "Perawatan mesin sepeda motor",
+      "Sistem injeksi (FI) sepeda motor",
+      "Sistem kelistrikan sepeda motor",
+      "Perawatan sistem pemindah tenaga",
+      "Diagnosa kerusakan sepeda motor",
+      "Manajemen bengkel sepeda motor"
+    ],
+    "prospekKarier": [
+      "Mekanik Sepeda Motor",
+      "Teknisi AHASS / bengkel resmi",
+      "Teknisi Injeksi",
+      "Service Advisor",
+      "Wirausaha bengkel sepeda motor"
+    ],
+    "mataPelajaran": [
+      "Pekerjaan Dasar Otomotif",
+      "Pemeliharaan Mesin Sepeda Motor",
+      "Pemeliharaan Kelistrikan Sepeda Motor",
+      "Pemeliharaan Chassis Sepeda Motor",
+      "Bisnis Sepeda Motor"
+    ],
+    "fasilitasPendukung": [
+      "Bengkel sepeda motor praktik",
+      "Alat diagnosa injeksi",
+      "Unit sepeda motor konvensional & injeksi"
+    ]
+  },
+  {
+    "slug": "akuntansi-dan-keuangan-lembaga",
+    "nama": "Akuntansi dan Keuangan Lembaga",
+    "singkatan": "AKL",
+    "bidang": "Bisnis & Manajemen",
+    "durasi": "3 Tahun",
+    "akreditasi": "A",
+    "ikon": "calculator",
+    "deskripsi": "Program keahlian yang fokus pada pembukuan, akuntansi keuangan, perpajakan, dan komputer akuntansi.",
+    "kompetensi": [
+      "Siklus akuntansi perusahaan jasa, dagang, dan manufaktur",
+      "Akuntansi keuangan lembaga",
+      "Perpajakan (PPh & PPN)",
+      "Komputer akuntansi (software akuntansi)",
+      "Administrasi transaksi & kas",
+      "Laporan keuangan"
+    ],
+    "prospekKarier": [
+      "Staf Akuntansi",
+      "Staf Perpajakan",
+      "Teller / Staf Bank",
+      "Staf Administrasi Keuangan",
+      "Wirausaha di bidang jasa keuangan"
+    ],
+    "mataPelajaran": [
+      "Dasar Akuntansi dan Perbankan",
+      "Akuntansi Keuangan",
+      "Perpajakan",
+      "Komputer Akuntansi",
+      "Akuntansi Keuangan Lembaga"
+    ],
+    "fasilitasPendukung": [
+      "2 lab akuntansi",
+      "Software komputer akuntansi & perpajakan",
+      "Dokumen simulasi transaksi keuangan"
+    ]
+  },
+  {
+    "slug": "bisnis-digital",
+    "nama": "Bisnis Digital",
+    "singkatan": "BD",
+    "bidang": "Bisnis & Manajemen",
+    "durasi": "3 Tahun",
+    "akreditasi": "A",
+    "ikon": "megaphone",
+    "deskripsi": "Program keahlian yang fokus pada pemasaran digital, e-commerce, bisnis online, dan pengelolaan media sosial.",
+    "kompetensi": [
+      "Pemasaran digital (digital marketing)",
+      "Pengelolaan e-commerce",
+      "Pengelolaan media sosial & konten",
+      "Copywriting & desain konten",
+      "Analisis data bisnis digital",
+      "Kewirausahaan digital"
+    ],
+    "prospekKarier": [
+      "Digital Marketer",
+      "Social Media Specialist",
+      "Content Creator",
+      "E-commerce Admin",
+      "Marketplace Seller",
+      "Wirausaha online shop"
+    ],
+    "mataPelajaran": [
+      "Dasar Bisnis dan Ekonomi",
+      "Pemasaran Digital",
+      "Bisnis Online & E-commerce",
+      "Komunikasi Bisnis",
+      "Praktik Kewirausahaan Digital"
+    ],
+    "fasilitasPendukung": [
+      "1 studio bisnis digital",
+      "Setup konten kreator & live streaming",
+      "Platform e-commerce untuk praktik"
+    ]
+  }
+]

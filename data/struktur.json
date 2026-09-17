@@ -1,0 +1,17 @@
+[
+  { "jabatan": "Kepala Sekolah", "nama": "Drs. Hendra Wijaya, M.Pd." },
+  { "jabatan": "Wakil Kepala Bidang Kurikulum", "nama": "Rina Kartika, S.Pd., M.M." },
+  { "jabatan": "Wakil Kepala Bidang Kesiswaan", "nama": "Agus Setiawan, S.T." },
+  { "jabatan": "Wakil Kepala Bidang Sarana & Prasarana", "nama": "Budi Santoso, S.T." },
+  {
+    "jabatan": "Wakil Kepala Bidang Hubungan Industri",
+    "nama": "Dra. Siti Nurhaliza, M.M."
+  },
+  { "jabatan": "Kepala Tata Usaha", "nama": "Eko Prasetyo, S.E." },
+  { "jabatan": "Kepala Program TKJ", "nama": "Dedi Kurniawan, S.Kom." },
+  { "jabatan": "Kepala Program RPL", "nama": "Fajar Ramadhan, S.Kom., M.T." },
+  { "jabatan": "Kepala Program TKRO", "nama": "Joko Susilo, S.T." },
+  { "jabatan": "Kepala Program TBSM", "nama": "Andi Pratama, S.T." },
+  { "jabatan": "Kepala Program AKL", "nama": "Rina Marlina, S.E." },
+  { "jabatan": "Kepala Program BD", "nama": "Lestari Dewi, S.E., M.M." }
+]

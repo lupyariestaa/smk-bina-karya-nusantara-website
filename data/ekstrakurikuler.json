@@ -1,0 +1,77 @@
+[
+  {
+    "nama": "Pramuka",
+    "kategori": "Wajib",
+    "deskripsi": "Kegiatan kepramukaan untuk membentuk karakter, kemandirian, dan jiwa kepemimpinan."
+  },
+  {
+    "nama": "Paskibra",
+    "kategori": "Kedisiplinan",
+    "deskripsi": "Latihan baris-berbaris dan kedisiplinan, serta pengibaran bendera pada upacara."
+  },
+  {
+    "nama": "PMR (Palang Merah Remaja)",
+    "kategori": "Kesehatan & Sosial",
+    "deskripsi": "Kegiatan kesehatan, pertolongan pertama, dan bakti sosial."
+  },
+  {
+    "nama": "Rohis",
+    "kategori": "Keagamaan",
+    "deskripsi": "Kegiatan keagamaan untuk memperkuat iman dan akhlak siswa."
+  },
+  {
+    "nama": "Futsal",
+    "kategori": "Olahraga",
+    "deskripsi": "Latihan dan kompetisi futsal antar sekolah."
+  },
+  {
+    "nama": "Basket",
+    "kategori": "Olahraga",
+    "deskripsi": "Latihan dan kompetisi bola basket."
+  },
+  {
+    "nama": "Voli",
+    "kategori": "Olahraga",
+    "deskripsi": "Latihan dan kompetisi bola voli."
+  },
+  {
+    "nama": "Bulu Tangkis",
+    "kategori": "Olahraga",
+    "deskripsi": "Latihan dan kompetisi bulu tangkis."
+  },
+  {
+    "nama": "Pencak Silat",
+    "kategori": "Seni & Bela Diri",
+    "deskripsi": "Latihan seni bela diri tradisional Indonesia."
+  },
+  {
+    "nama": "Paduan Suara",
+    "kategori": "Seni",
+    "deskripsi": "Latihan vokal dan penampilan pada kegiatan sekolah."
+  },
+  {
+    "nama": "Band / Musik",
+    "kategori": "Seni",
+    "deskripsi": "Latihan musik dan penampilan pada acara sekolah."
+  },
+  {
+    "nama": "Tari Tradisional",
+    "kategori": "Seni",
+    "deskripsi": "Latihan dan pementasan tari tradisional Indonesia."
+  },
+  {
+    "nama": "English Club",
+    "kategori": "Bahasa",
+    "deskripsi": "Latihan kemampuan bahasa Inggris melalui percakapan dan lomba."
+  },
+  {
+    "nama": "Robotik & Coding",
+    "kategori": "Teknologi",
+    "deskripsi": "Belajar robotika dan pemrograman untuk kompetisi teknologi."
+  },
+  {
+    "nama": "Jurnalistik / Media Sekolah",
+    "kategori": "Kreatif",
+    "deskripsi": "Pengelolaan konten berita dan media sosial sekolah."
+  }
+]

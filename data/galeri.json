@@ -1,0 +1,66 @@
+[
+  {
+    "id": "g-01",
+    "judul": "Gedung Utama Sekolah",
+    "kategori": "Gedung",
+    "tipe": "foto",
+    "src": "/images/galeri/gedung-utama.svg",
+    "deskripsi": "Tampak depan gedung utama SMK Bina Karya Nusantara."
+  },
+  {
+    "id": "g-02",
+    "judul": "Lab Komputer RPL",
+    "kategori": "Laboratorium",
+    "tipe": "foto",
+    "src": "/images/galeri/lab-rpl.svg",
+    "deskripsi": "Lab komputer program keahlian Rekayasa Perangkat Lunak."
+  },
+  {
+    "id": "g-03",
+    "judul": "Bengkel Otomotif",
+    "kategori": "Bengkel",
+    "tipe": "foto",
+    "src": "/images/galeri/bengkel-otomotif.svg",
+    "deskripsi": "Area praktik siswa program keahlian otomotif."
+  },
+  {
+    "id": "g-04",
+    "judul": "Lab Jaringan TKJ",
+    "kategori": "Laboratorium",
+    "tipe": "foto",
+    "src": "/images/galeri/lab-tkj.svg",
+    "deskripsi": "Laboratorium jaringan dan server program keahlian TKJ."
+  },
+  {
+    "id": "g-05",
+    "judul": "Perpustakaan",
+    "kategori": "Akademik",
+    "tipe": "foto",
+    "src": "/images/galeri/perpustakaan.svg",
+    "deskripsi": "Ruang baca dan koleksi buku perpustakaan sekolah."
+  },
+  {
+    "id": "g-06",
+    "judul": "Lapangan Olahraga",
+    "kategori": "Olahraga",
+    "tipe": "foto",
+    "src": "/images/galeri/lapangan.svg",
+    "deskripsi": "Lapangan futsal dan basket untuk kegiatan siswa."
+  },
+  {
+    "id": "g-07",
+    "judul": "Aula Serbaguna",
+    "kategori": "Gedung",
+    "tipe": "foto",
+    "src": "/images/galeri/aula.svg",
+    "deskripsi": "Aula untuk kegiatan resmi dan pertemuan sekolah."
+  },
+  {
+    "id": "g-08",
+    "judul": "Studio Bisnis Digital",
+    "kategori": "Laboratorium",
+    "tipe": "foto",
+    "src": "/images/galeri/studio-bd.svg",
+    "deskripsi": "Studio konten kreator program keahlian Bisnis Digital."
+  }
+]
