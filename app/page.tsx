@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Icon } from '@/components/Icon';
 import { AppImage } from '@/components/AppImage';
+import { Logo3D } from '@/components/Logo';
 import { SectionHeading, CtaBanner, IconBadge } from '@/components/ui';
 import {
   sekolah,
@@ -17,7 +18,6 @@ import { formatTanggal, formatAngka } from '@/lib/utils';
 export default function HomePage() {
   const berita = getBeritaTerbaru(3);
   const pengumuman = getPengumumanPpdbTerbaru(2);
-  const heroImgs = images.hero.beranda as string[];
 
   const stats = [
     { label: 'Program Keahlian', value: `${statistik.ringkasan.jumlahJurusan}` },
@@ -54,19 +54,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              {heroImgs.map((src, i) => (
-                <AppImage
-                  key={src}
-                  src={src}
-                  alt={`Gedung ${sekolah.nama}`}
-                  priority={i === 0}
-                  aspect={i === 0 ? 'aspect-[4/3] col-span-2' : 'aspect-[4/3]'}
-                  className="rounded-2xl shadow-sm"
-                />
-              ))}
-            </div>
+          <div className="animate-fade-in-up">
+            <Logo3D />
           </div>
         </div>
       </section>

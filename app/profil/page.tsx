@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { PageHero, SectionHeading, CtaBanner } from '@/components/ui';
 import { AppImage } from '@/components/AppImage';
 import { Icon } from '@/components/Icon';
+import { Logo } from '@/components/Logo';
 import {
   profil,
   sekolah,
@@ -43,21 +44,35 @@ export default function ProfilPage() {
       {/* Identitas umum */}
       <section className="section">
         <div className="container-content">
-          <SectionHeading
-            eyebrow="Identitas"
-            title="Identitas Sekolah"
-            description="Data resmi sekolah sebagai sumber informasi terpercaya."
-          />
-          <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {identitasUmum.map((item) => (
-              <div key={item.label} className="card p-5">
-                <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  {item.label}
-                </dt>
-                <dd className="mt-1 font-semibold text-slate-900">{item.value}</dd>
+          <div className="grid items-start gap-8 lg:grid-cols-3">
+            <div className="card flex flex-col items-center p-8 text-center lg:col-span-1">
+              <div className="flex h-40 w-40 items-center justify-center">
+                <Logo size={160} />
               </div>
-            ))}
-          </dl>
+              <h2 className="mt-4 text-lg">{sekolah.nama}</h2>
+              <p className="mt-1 text-sm text-brand-700">{sekolah.tagline}</p>
+              <p className="mt-3 text-xs text-slate-500">
+                Akreditasi {sekolah.akreditasi} · NPSN {sekolah.npsn}
+              </p>
+            </div>
+            <div className="lg:col-span-2">
+              <SectionHeading
+                eyebrow="Identitas"
+                title="Identitas Sekolah"
+                description="Data resmi sekolah sebagai sumber informasi terpercaya."
+              />
+              <dl className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {identitasUmum.map((item) => (
+                  <div key={item.label} className="card p-5">
+                    <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      {item.label}
+                    </dt>
+                    <dd className="mt-1 font-semibold text-slate-900">{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
 

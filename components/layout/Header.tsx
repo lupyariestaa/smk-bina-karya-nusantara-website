@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { navItems } from '@/lib/nav';
 import { sekolah } from '@/lib/data';
 import { Icon } from '@/components/Icon';
+import { Logo } from '@/components/Logo';
 import { SearchButton } from '@/components/SearchDialog';
 import { cn } from '@/lib/utils';
 import type { SearchEntry } from '@/components/SearchDialog';
@@ -36,16 +37,14 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
           className="flex items-center gap-3"
           aria-label={`${sekolah.nama} - Beranda`}
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white">
-            <Icon name="building" className="h-6 w-6" />
+          <span className="flex h-11 w-11 items-center justify-center">
+            <Logo size={44} priority />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-bold text-slate-900 sm:text-base">
               {sekolah.namaSingkat}
             </span>
-            <span className="hidden text-[11px] text-slate-500 sm:block">
-              {sekolah.nama}
-            </span>
+            <span className="hidden text-[11px] text-slate-500 sm:block">{sekolah.nama}</span>
           </span>
         </Link>
 

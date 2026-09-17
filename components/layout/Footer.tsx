@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { sekolah, jurusanList } from '@/lib/data';
 import { navItems, legalItems } from '@/lib/nav';
 import { Icon } from '@/components/Icon';
+import { Logo } from '@/components/Logo';
 
 export function Footer() {
   const tahun = new Date().getFullYear();
@@ -12,8 +13,8 @@ export function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white">
-              <Icon name="building" className="h-6 w-6" />
+            <span className="flex h-12 w-12 items-center justify-center">
+              <Logo size={48} />
             </span>
             <span className="font-bold text-slate-900">{sekolah.namaSingkat}</span>
           </div>

@@ -75,6 +75,8 @@ export default function RootLayout({
     alternateName: sekolah.namaSingkat,
     description: sekolah.deskripsiSingkat,
     url: siteUrl,
+    logo: `${siteUrl}/logo-512.png`,
+    image: `${siteUrl}/logo-512.png`,
     email: sekolah.kontak.email,
     telephone: sekolah.kontak.telepon,
     foundingDate: String(sekolah.tahunBerdiri),

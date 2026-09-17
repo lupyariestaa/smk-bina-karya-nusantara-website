@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHero, CtaBanner, SectionHeading } from '@/components/ui';
 import { Icon } from '@/components/Icon';
+import { Logo } from '@/components/Logo';
 import { ppdb, sekolah, heroImage } from '@/lib/data';
 import { formatTanggal } from '@/lib/utils';
 
@@ -27,13 +28,18 @@ export default function PpdbPage() {
       {/* Perhatian penting (tanpa form pendaftaran) */}
       <section className="pt-10">
         <div className="container-content">
-          <div className="flex items-start gap-3 rounded-2xl border border-brand-200 bg-brand-50 p-5">
-            <Icon name="sparkle" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" />
-            <p className="text-sm text-brand-900">
-              <strong>Penting:</strong> {ppdb.statusPendaftaran} Halaman ini hanya
-              menampilkan informasi dan pengumuman PPDB. Untuk mendaftar, silakan ikuti
-              kanal pendaftaran resmi yang diumumkan panitia.
-            </p>
+          <div className="flex flex-col gap-5 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex-row sm:items-center">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center">
+              <Logo size={64} />
+            </span>
+            <div className="flex items-start gap-3">
+              <Icon name="sparkle" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" />
+              <p className="text-sm text-brand-900">
+                <strong>Penting:</strong> {ppdb.statusPendaftaran} Halaman ini hanya
+                menampilkan informasi dan pengumuman PPDB. Untuk mendaftar, silakan ikuti
+                kanal pendaftaran resmi yang diumumkan panitia.
+              </p>
+            </div>
           </div>
         </div>
       </section>

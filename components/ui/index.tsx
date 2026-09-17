@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/Icon';
+import { Logo } from '@/components/Logo';
 import { cn } from '@/lib/utils';
 
 export function SectionHeading({
@@ -76,6 +77,15 @@ export function PageHero({
             </ol>
           </nav>
         )}
+        {/* Logo di samping judul, hanya saat ada gambar latar */}
+        {image && (
+          <div className="mb-4 inline-flex items-center gap-3">
+            <Logo size={56} />
+            <span className="text-sm font-medium text-brand-100">
+              SMK Bina Karya Nusantara
+            </span>
+          </div>
+        )}
         <h1
           className={cn(
             'max-w-3xl text-3xl sm:text-4xl lg:text-5xl',
@@ -85,9 +95,7 @@ export function PageHero({
           {title}
         </h1>
         {description && (
-          <p
-            className={cn('mt-4 max-w-2xl', image ? 'text-brand-100' : 'text-slate-600')}
-          >
+          <p className={cn('mt-4 max-w-2xl', image ? 'text-brand-100' : 'text-slate-600')}>
             {description}
           </p>
         )}
@@ -111,25 +119,37 @@ export function CtaBanner({
   return (
     <section className="section">
       <div className="container-content">
-        <div className="rounded-3xl bg-brand-700 px-6 py-12 text-center sm:px-12">
-          <h2 className="text-2xl text-white sm:text-3xl">{title}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-brand-100">{description}</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Link
-              href={primary.href}
-              className="btn bg-white text-brand-700 hover:bg-brand-50"
-            >
-              {primary.label}
-              <Icon name="arrowRight" className="h-4 w-4" />
-            </Link>
-            {secondary && (
+        <div className="relative overflow-hidden rounded-3xl bg-brand-700 px-6 py-12 text-center sm:px-12">
+          {/* Watermark logo */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-8 -top-8 opacity-10 sm:-right-4 sm:-top-6"
+          >
+            <Logo size={220} />
+          </span>
+          <div className="relative">
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 p-3 ring-1 ring-white/20 backdrop-blur">
+              <Logo size={56} />
+            </div>
+            <h2 className="text-2xl text-white sm:text-3xl">{title}</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-brand-100">{description}</p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link
-                href={secondary.href}
-                className="btn border border-white/40 text-white hover:bg-white/10"
+                href={primary.href}
+                className="btn bg-white text-brand-700 hover:bg-brand-50"
               >
-                {secondary.label}
+                {primary.label}
+                <Icon name="arrowRight" className="h-4 w-4" />
               </Link>
-            )}
+              {secondary && (
+                <Link
+                  href={secondary.href}
+                  className="btn border border-white/40 text-white hover:bg-white/10"
+                >
+                  {secondary.label}
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
