@@ -95,7 +95,9 @@ export function PageHero({
           {title}
         </h1>
         {description && (
-          <p className={cn('mt-4 max-w-2xl', image ? 'text-brand-100' : 'text-slate-600')}>
+          <p
+            className={cn('mt-4 max-w-2xl', image ? 'text-brand-100' : 'text-slate-600')}
+          >
             {description}
           </p>
         )}
@@ -119,14 +121,21 @@ export function CtaBanner({
   return (
     <section className="section">
       <div className="container-content">
-        <div className="relative overflow-hidden rounded-3xl bg-brand-700 px-6 py-12 text-center sm:px-12">
-          {/* Watermark logo */}
+        <div className="group relative overflow-hidden rounded-3xl bg-brand-700 px-6 py-12 text-center sm:px-12">
+          {/* Efek silau melintas (sweep shine) looping */}
+          <span aria-hidden="true" className="pointer-events-none absolute inset-0">
+            <span className="absolute -left-1/3 top-0 h-full w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent [animation:shine_5s_ease-in-out_infinite]" />
+          </span>
+          {/* Glow lembut di sudut */}
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -right-8 -top-8 opacity-10 sm:-right-4 sm:-top-6"
-          >
-            <Logo size={220} />
-          </span>
+            className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-400/30 blur-3xl"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-brand-500/30 blur-3xl"
+          />
+
           <div className="relative">
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 p-3 ring-1 ring-white/20 backdrop-blur">
               <Logo size={56} />

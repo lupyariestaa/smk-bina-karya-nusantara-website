@@ -43,9 +43,19 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        shine: {
+          '0%': { transform: 'translateX(0) skewX(-12deg)' },
+          '60%, 100%': { transform: 'translateX(450%) skewX(-12deg)' },
+        },
+        'shine-border': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
+        },
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.5s ease-out both',
+        shine: 'shine 4.5s ease-in-out infinite',
+        'shine-border': 'shine-border 6s linear infinite',
       },
     },
   },
