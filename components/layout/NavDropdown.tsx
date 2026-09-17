@@ -13,19 +13,8 @@ import type { NavGroup } from '@/lib/nav';
  */
 export function NavDropdown({ group }: { group: NavGroup }) {
   const pathname = usePathname();
-  // Grup dianggap aktif bila halaman saat ini cocok dengan tautan NON-anchor-nya.
-  // Tautan ber-anchor (mis. `/#prestasi`) tidak ikut menentukan agar grup tidak
-  // tersorot saat pengguna berpindah ke halaman lain.
-  const groupActive = group.items.some(
-    (item) => isRealPageLink(item.href) && isPathActive(pathname, item.href),
-  );
-
-  const triggerClasses = cn(
-    'inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-    groupActive
-      ? 'bg-brand-50 text-brand-700'
-      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
-  );
+  const triggerClasses =
+    'inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900';
 
   const triggerContent = (
     <>
@@ -43,7 +32,7 @@ export function NavDropdown({ group }: { group: NavGroup }) {
         <Link
           href={group.href}
           className={triggerClasses}
-          aria-current={groupActive ? 'page' : undefined}
+          aria-current={pathname === group.href ? 'page' : undefined}
         >
           {triggerContent}
         </Link>
@@ -72,28 +61,13 @@ export function NavDropdown({ group }: { group: NavGroup }) {
                 <Link
                   href={item.href}
                   aria-current={active ? 'page' : undefined}
-                  className={cn(
-                    'group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors',
-                    active ? 'bg-brand-50' : 'hover:bg-slate-50',
-                  )}
+                  className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-50"
                 >
-                  <span
-                    className={cn(
-                      'mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors',
-                      active
-                        ? 'bg-brand-600 text-white'
-                        : 'bg-brand-50 text-brand-600 group-hover/item:bg-brand-100',
-                    )}
-                  >
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600 transition-colors group-hover/item:bg-brand-100">
                     {item.icon && <Icon name={item.icon} className="h-4 w-4" />}
                   </span>
                   <span className="min-w-0">
-                    <span
-                      className={cn(
-                        'block text-sm font-semibold',
-                        active ? 'text-brand-700' : 'text-slate-800',
-                      )}
-                    >
+                    <span className="block text-sm font-semibold text-slate-800">
                       {item.label}
                     </span>
                     {item.description && (

@@ -62,12 +62,7 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
-                className={cn(
-                  'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                  active
-                    ? 'bg-brand-50 text-brand-700'
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
-                )}
+                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
               >
                 {item.label}
               </Link>
@@ -118,12 +113,7 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
                   <Link
                     href={item.href}
                     aria-current={active ? 'page' : undefined}
-                    className={cn(
-                      'block rounded-lg px-3 py-3 text-sm font-medium',
-                      active
-                        ? 'bg-brand-50 text-brand-700'
-                        : 'text-slate-700 hover:bg-slate-100',
-                    )}
+                    className="block rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100"
                   >
                     {item.label}
                   </Link>
@@ -133,19 +123,13 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
 
             {navGroups.map((group) => {
               const isOpen = openGroup === group.label;
-              const groupActive = group.items.some(
-                (item) => isRealPageLink(item.href) && isPathActive(pathname, item.href),
-              );
               return (
                 <li key={group.label} className="border-t border-slate-100">
                   <button
                     type="button"
                     onClick={() => setOpenGroup(isOpen ? null : group.label)}
                     aria-expanded={isOpen}
-                    className={cn(
-                      'flex w-full items-center justify-between rounded-lg px-3 py-3 text-sm font-medium',
-                      groupActive ? 'text-brand-700' : 'text-slate-700',
-                    )}
+                    className="flex w-full items-center justify-between rounded-lg px-3 py-3 text-sm font-medium text-slate-700"
                   >
                     {group.label}
                     <Icon
@@ -166,12 +150,7 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
                             <Link
                               href={item.href}
                               aria-current={active ? 'page' : undefined}
-                              className={cn(
-                                'flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm',
-                                active
-                                  ? 'bg-brand-50 font-medium text-brand-700'
-                                  : 'text-slate-600 hover:bg-slate-50',
-                              )}
+                              className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                             >
                               {item.icon && (
                                 <Icon
