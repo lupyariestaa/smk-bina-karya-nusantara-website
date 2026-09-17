@@ -1,0 +1,281 @@
+{
+  "catatan": "Struktur organisasi SMK Bina Karya Nusantara tahun ajaran berjalan. Foto merupakan ilustrasi.",
+  "total": 30,
+  "root": {
+    "id": "kepsek",
+    "nama": "Drs. Hendra Wijaya, M.Pd.",
+    "jabatan": "Kepala Sekolah",
+    "gelar": "M.Pd.",
+    "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=70",
+    "level": 0,
+    "anak": [
+      {
+        "id": "wakur",
+        "nama": "Rina Kartika, S.Pd., M.M.",
+        "jabatan": "Wakil Kepala Bidang Kurikulum",
+        "gelar": "S.Pd., M.M.",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=70",
+        "level": 1,
+        "anak": [
+          {
+            "id": "kapro-tkj",
+            "nama": "Dedi Kurniawan, S.Kom.",
+            "jabatan": "Kepala Program TKJ",
+            "gelar": "S.Kom.",
+            "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-tkj-1",
+                "nama": "Ahmad Fauzi, S.Kom.",
+                "jabatan": "Guru Produktif TKJ",
+                "gelar": "S.Kom.",
+                "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              },
+              {
+                "id": "guru-tkj-2",
+                "nama": "Nadia Ayu, S.T.",
+                "jabatan": "Guru Jaringan & Infrastruktur",
+                "gelar": "S.T.",
+                "foto": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          },
+          {
+            "id": "kapro-rpl",
+            "nama": "Fajar Ramadhan, S.Kom., M.T.",
+            "jabatan": "Kepala Program RPL",
+            "gelar": "S.Kom., M.T.",
+            "foto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-rpl-1",
+                "nama": "Rizky Pratama, S.Kom.",
+                "jabatan": "Guru Pemrograman Web",
+                "gelar": "S.Kom.",
+                "foto": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              },
+              {
+                "id": "guru-rpl-2",
+                "nama": "Sinta Maharani, S.Kom.",
+                "jabatan": "Guru Basis Data & Mobile",
+                "gelar": "S.Kom.",
+                "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "waka-kesiswaan",
+        "nama": "Agus Setiawan, S.T.",
+        "jabatan": "Wakil Kepala Bidang Kesiswaan",
+        "gelar": "S.T.",
+        "foto": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=70",
+        "level": 1,
+        "anak": [
+          {
+            "id": "koord-bk",
+            "nama": "Dewi Lestari, S.Psi.",
+            "jabatan": "Koordinator Bimbingan Konseling",
+            "gelar": "S.Psi.",
+            "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "bk-1",
+                "nama": "Hesti Rahmawati, S.Pd.",
+                "jabatan": "Guru BK",
+                "gelar": "S.Pd.",
+                "foto": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          },
+          {
+            "id": "koord-ekskul",
+            "nama": "Bayu Nugroho, S.Pd.",
+            "jabatan": "Koordinator Ekstrakurikuler",
+            "gelar": "S.Pd.",
+            "foto": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "pembina-1",
+                "nama": "Yoga Saputra, S.Pd.",
+                "jabatan": "Pembina Olahraga",
+                "gelar": "S.Pd.",
+                "foto": "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "waka-sarpras",
+        "nama": "Budi Santoso, S.T.",
+        "jabatan": "Wakil Kepala Bidang Sarana & Prasarana",
+        "gelar": "S.T.",
+        "foto": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=400&h=400&q=70",
+        "level": 1,
+        "anak": [
+          {
+            "id": "staf-sarpras",
+            "nama": "Toni Hidayat, S.T.",
+            "jabatan": "Staf Sarana & Prasarana",
+            "gelar": "S.T.",
+            "foto": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "teknisi",
+                "nama": "Wahyu Setiadi",
+                "jabatan": "Teknisi & Pemeliharaan",
+                "gelar": "-",
+                "foto": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "waka-humas",
+        "nama": "Dra. Siti Nurhaliza, M.M.",
+        "jabatan": "Wakil Kepala Bidang Hubungan Industri",
+        "gelar": "M.M.",
+        "foto": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=400&h=400&q=70",
+        "level": 1,
+        "anak": [
+          {
+            "id": "kapro-tkro",
+            "nama": "Joko Susilo, S.T.",
+            "jabatan": "Kepala Program TKRO",
+            "gelar": "S.T.",
+            "foto": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-tkro-1",
+                "nama": "Bambang Sutrisno, S.T.",
+                "jabatan": "Guru Mesin Otomotif",
+                "gelar": "S.T.",
+                "foto": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          },
+          {
+            "id": "kapro-tbsm",
+            "nama": "Andi Pratama, S.T.",
+            "jabatan": "Kepala Program TBSM",
+            "gelar": "S.T.",
+            "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=70&sat=2",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-tbsm-1",
+                "nama": "Hendro Purnomo, S.T.",
+                "jabatan": "Guru Sepeda Motor",
+                "gelar": "S.T.",
+                "foto": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ka-tu",
+        "nama": "Eko Prasetyo, S.E.",
+        "jabatan": "Kepala Tata Usaha",
+        "gelar": "S.E.",
+        "foto": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&h=400&q=70&sat=1",
+        "level": 1,
+        "anak": [
+          {
+            "id": "kapro-akl",
+            "nama": "Rina Marlina, S.E.",
+            "jabatan": "Kepala Program AKL",
+            "gelar": "S.E.",
+            "foto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-akl-1",
+                "nama": "Fitri Handayani, S.E.",
+                "jabatan": "Guru Akuntansi",
+                "gelar": "S.E.",
+                "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=70",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          },
+          {
+            "id": "kapro-bd",
+            "nama": "Lestari Dewi, S.E., M.M.",
+            "jabatan": "Kepala Program Bisnis Digital",
+            "gelar": "S.E., M.M.",
+            "foto": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&h=400&q=70",
+            "level": 2,
+            "anak": [
+              {
+                "id": "guru-bd-1",
+                "nama": "Aditya Nugraha, S.E.",
+                "jabatan": "Guru Pemasaran Digital",
+                "gelar": "S.E.",
+                "foto": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=70&sat=2",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          },
+          {
+            "id": "staf-tu",
+            "nama": "Sri Wahyuni, A.Md.",
+            "jabatan": "Staf Administrasi & Keuangan",
+            "gelar": "A.Md.",
+            "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=70&sat=2",
+            "level": 2,
+            "anak": [
+              {
+                "id": "operator",
+                "nama": "Dian Permata, S.Kom.",
+                "jabatan": "Operator Dapodik",
+                "gelar": "S.Kom.",
+                "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=70&sat=2",
+                "level": 3,
+                "anak": []
+              },
+              {
+                "id": "pustakawan",
+                "nama": "Maya Sari, S.IP.",
+                "jabatan": "Kepala Perpustakaan",
+                "gelar": "S.IP.",
+                "foto": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&h=400&q=70&sat=2",
+                "level": 3,
+                "anak": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

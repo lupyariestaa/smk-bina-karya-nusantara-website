@@ -47,6 +47,12 @@ export const navGroups: NavGroup[] = [
         description: 'Arah dan tujuan pendidikan kami',
       },
       {
+        label: 'Struktur Organisasi',
+        href: '/struktur',
+        icon: 'users',
+        description: 'Pimpinan, guru, dan tenaga kependidikan',
+      },
+      {
         label: 'Fasilitas & Galeri',
         href: '/fasilitas',
         icon: 'hall',

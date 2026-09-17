@@ -149,6 +149,24 @@ export interface StrukturItem {
   nama: string;
 }
 
+/** Simpul dalam bagan organisasi (pohon). */
+export interface StaffNode {
+  id: string;
+  nama: string;
+  jabatan: string;
+  gelar: string;
+  foto: string;
+  /** Kedalaman level (0 = puncak). */
+  level: number;
+  anak: StaffNode[];
+}
+
+export interface StaffStruktur {
+  catatan: string;
+  total: number;
+  root: StaffNode;
+}
+
 export interface Kemitraan {
   dudi: string[];
   perguruanTinggi: string[];

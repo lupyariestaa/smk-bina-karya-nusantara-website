@@ -8,6 +8,7 @@ import galeriData from '@/data/galeri.json';
 import prestasiData from '@/data/prestasi.json';
 import ekstrakurikulerData from '@/data/ekstrakurikuler.json';
 import strukturData from '@/data/struktur.json';
+import staffData from '@/data/staff.json';
 import kemitraanData from '@/data/kemitraan.json';
 import statistikData from '@/data/statistik.json';
 import ppdbData from '@/data/ppdb.json';
@@ -25,6 +26,7 @@ import type {
   Prestasi,
   Ekstrakurikuler,
   StrukturItem,
+  StaffStruktur,
   Kemitraan,
   Statistik,
   Ppdb,
@@ -41,6 +43,7 @@ export const galeriList = galeriData as GaleriItem[];
 export const prestasiList = prestasiData as Prestasi[];
 export const ekstrakurikulerList = ekstrakurikulerData as Ekstrakurikuler[];
 export const strukturList = strukturData as StrukturItem[];
+export const staffStruktur = staffData as StaffStruktur;
 export const kemitraan = kemitraanData as Kemitraan;
 export const statistik = statistikData as Statistik;
 export const ppdb = ppdbData as Ppdb;

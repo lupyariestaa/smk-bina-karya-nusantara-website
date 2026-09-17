@@ -7,6 +7,7 @@ import {
   profil,
   sejarah,
   visiMisi,
+  staffStruktur,
 } from './data';
 import type { SearchEntry } from '@/components/SearchDialog';
 
@@ -35,6 +36,12 @@ export function buildSearchIndex(): SearchEntry[] {
       href: '/sejarah',
       category: 'Profil',
       text: `${sejarah.ringkasan} ${sejarah.timeline.map((t) => `${t.tahun} ${t.judul} ${t.deskripsi}`).join(' ')}`,
+    },
+    {
+      title: 'Struktur Organisasi',
+      href: '/struktur',
+      category: 'Profil',
+      text: `${staffStruktur.catatan} ${staffStruktur.root.nama} ${staffStruktur.root.jabatan}`,
     },
     {
       title: 'Program Keahlian',

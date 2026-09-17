@@ -72,6 +72,59 @@
   }
 }
 
+/* Bagan organisasi (org chart) — garis penghubung siku-siku modern. */
+@layer components {
+  .org-chart {
+    --org-line: #cbd5e1;
+  }
+
+  /* Setiap simpul punya "kaki" vertikal dari induk. */
+  .org-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 2rem;
+    background-color: var(--org-line);
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 1024px) {
+    /* Kaki vertikal dari ujung garis horizontal ke tiap kartu. */
+    .org-children > .org-node::before {
+      top: 0;
+    }
+
+    /* Garis horizontal yang menyatukan anak-anak sejajar. */
+    .org-children > .org-node::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--org-line);
+    }
+
+    /* Anak pertama: garis horizontal hanya dari tengah ke kanan. */
+    .org-children > .org-node:first-child::after {
+      left: 50%;
+      width: 50%;
+    }
+
+    /* Anak terakhir: garis horizontal hanya dari kiri ke tengah. */
+    .org-children > .org-node:last-child::after {
+      width: 50%;
+    }
+
+    /* Anak tunggal: tak perlu garis horizontal. */
+    .org-children > .org-node:only-child::after {
+      display: none;
+    }
+  }
+}
+
 /* Hormati preferensi pengguna yang mengurangi animasi (aksesibilitas). */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -4,15 +4,7 @@ import { PageHero, SectionHeading, CtaBanner } from '@/components/ui';
 import { AppImage } from '@/components/AppImage';
 import { Icon } from '@/components/Icon';
 import { Logo } from '@/components/Logo';
-import {
-  profil,
-  sekolah,
-  strukturList,
-  statistik,
-  kemitraan,
-  images,
-  heroImage,
-} from '@/lib/data';
+import { profil, sekolah, statistik, kemitraan, images, heroImage } from '@/lib/data';
 import { formatAngka } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -54,9 +46,9 @@ const pintasanProfil = [
   },
   {
     label: 'Struktur Organisasi',
-    href: '/profil#struktur',
+    href: '/struktur',
     icon: 'users',
-    deskripsi: 'Susunan pimpinan dan penanggung jawab program.',
+    deskripsi: 'Susunan pimpinan, guru, dan tenaga kependidikan.',
   },
 ];
 
@@ -194,27 +186,6 @@ export default function ProfilPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Struktur organisasi */}
-      <section id="struktur" className="section scroll-mt-24">
-        <div className="container-content">
-          <SectionHeading
-            eyebrow="Struktur"
-            title="Struktur Organisasi"
-            description="Susunan pimpinan dan penanggung jawab program keahlian."
-          />
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {strukturList.map((s) => (
-              <li key={s.jabatan} className="card p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
-                  {s.jabatan}
-                </p>
-                <p className="mt-1 font-semibold text-slate-900">{s.nama}</p>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/profil',
     '/sejarah',
     '/visi-misi',
+    '/struktur',
     '/program-keahlian',
     '/fasilitas',
     '/ppdb',
