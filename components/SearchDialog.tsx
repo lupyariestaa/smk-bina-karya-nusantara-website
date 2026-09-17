@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import { Icon } from '@/components/Icon';
 import { cn } from '@/lib/utils';
@@ -111,21 +112,21 @@ export function SearchDialog({
     el?.scrollIntoView({ block: 'nearest' });
   }, [selected]);
 
-  if (!open) return null;
+  if (!open || typeof document === 'undefined') return null;
 
-  return (
+  return createPortal(
     <div
-      className="animate-dropdown-in fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-[10vh] backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/40 p-4 backdrop-blur-md"
       role="dialog"
       aria-modal="true"
       aria-label="Pencarian"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-xl overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-900/5"
+        className="animate-dropdown-in flex max-h-[calc(100dvh-2rem)] w-full max-w-xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-900/5"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-3 border-b border-slate-200 px-4">
+        <div className="flex shrink-0 items-center gap-3 border-b border-slate-200 px-4">
           <Icon name="search" className="h-5 w-5 shrink-0 text-slate-400" />
           <input
             ref={inputRef}
@@ -150,7 +151,7 @@ export function SearchDialog({
           </button>
         </div>
 
-        <div className="max-h-[60vh] overflow-y-auto p-2">
+        <div className="min-h-0 max-h-[60dvh] overflow-y-auto overscroll-contain p-2">
           {query.trim().length < 2 ? (
             <div className="px-3 py-8 text-center">
               <p className="text-sm text-slate-400">
@@ -220,7 +221,7 @@ export function SearchDialog({
           )}
         </div>
 
-        <div className="flex items-center justify-between border-t border-slate-200 px-4 py-2.5 text-[11px] text-slate-400">
+        <div className="flex shrink-0 items-center justify-between border-t border-slate-200 px-4 py-2.5 text-[11px] text-slate-400">
           <span>Pencarian konten situs</span>
           <span className="inline-flex items-center gap-1">
             <kbd className="rounded border border-slate-200 bg-slate-50 px-1.5 py-0.5 font-sans">
@@ -230,7 +231,8 @@ export function SearchDialog({
           </span>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
