@@ -9,7 +9,7 @@ import { Icon } from '@/components/Icon';
 import { Logo } from '@/components/Logo';
 import { SearchButton } from '@/components/SearchDialog';
 import { NavDropdown } from '@/components/layout/NavDropdown';
-import { cn } from '@/lib/utils';
+import { cn, isPathActive, isRealPageLink } from '@/lib/utils';
 import type { SearchEntry } from '@/components/SearchDialog';
 
 export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
@@ -56,8 +56,7 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
         {/* Desktop nav */}
         <nav aria-label="Navigasi utama" className="hidden items-center gap-1 xl:flex">
           {directNavItems.map((item) => {
-            const active =
-              item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+            const active = isPathActive(pathname, item.href);
             return (
               <Link
                 key={item.href}
@@ -79,17 +78,21 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-3">
           {entries.length > 0 && <SearchButton entries={entries} />}
-          <Link href="/ppdb" className="btn-primary hidden sm:inline-flex">
+          <Link
+            href="/ppdb"
+            className="btn-primary hidden h-10 shrink-0 whitespace-nowrap sm:inline-flex"
+          >
             Info PPDB
+            <Icon name="arrowRight" className="h-4 w-4" />
           </Link>
 
           {/* Mobile toggle */}
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-lg border border-slate-300 p-2 text-slate-600 xl:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-slate-600 transition-colors hover:bg-slate-100 xl:hidden"
             aria-label={menuOpen ? 'Tutup menu' : 'Buka menu'}
             aria-expanded={menuOpen}
             aria-controls="menu-mobile"
@@ -130,10 +133,8 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
 
             {navGroups.map((group) => {
               const isOpen = openGroup === group.label;
-              const groupActive = group.items.some((item) =>
-                item.href.split('#')[0] === '/'
-                  ? pathname === '/'
-                  : pathname.startsWith(item.href.split('#')[0]),
+              const groupActive = group.items.some(
+                (item) => isRealPageLink(item.href) && isPathActive(pathname, item.href),
               );
               return (
                 <li key={group.label} className="border-t border-slate-100">
@@ -158,9 +159,8 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
                   {isOpen && (
                     <ul className="animate-menu-in mb-1 ml-3 flex flex-col gap-0.5 border-l border-slate-200 pl-3">
                       {group.items.map((item) => {
-                        const path = item.href.split('#')[0];
                         const active =
-                          path === '/' ? pathname === '/' : pathname.startsWith(path);
+                          isRealPageLink(item.href) && isPathActive(pathname, item.href);
                         return (
                           <li key={`${group.label}-${item.href}`}>
                             <Link

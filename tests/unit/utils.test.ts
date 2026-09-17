@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { formatTanggal, formatAngka, cn } from '@/lib/utils';
+import {
+  formatTanggal,
+  formatAngka,
+  cn,
+  isPathActive,
+  isRealPageLink,
+} from '@/lib/utils';
 
 describe('formatTanggal', () => {
   it('memformat tanggal ISO ke format Indonesia', () => {
@@ -20,5 +26,27 @@ describe('formatAngka', () => {
 describe('cn', () => {
   it('menggabungkan className dan mengabaikan falsy', () => {
     expect(cn('a', false, undefined, 'b', null)).toBe('a b');
+  });
+});
+
+describe('isPathActive', () => {
+  it('hanya mengaktifkan beranda pada path tepat "/"', () => {
+    expect(isPathActive('/', '/')).toBe(true);
+    expect(isPathActive('/profil', '/')).toBe(false);
+  });
+
+  it('mencocokkan path sama atau turunannya', () => {
+    expect(isPathActive('/profil', '/profil')).toBe(true);
+    expect(isPathActive('/profil', '/profil#sejarah')).toBe(true);
+    expect(isPathActive('/berita/slug-a', '/berita')).toBe(true);
+    expect(isPathActive('/program-keahlian', '/berita')).toBe(false);
+  });
+});
+
+describe('isRealPageLink', () => {
+  it('menandai tautan ber-anchor sebagai bukan halaman konkret', () => {
+    expect(isRealPageLink('/#prestasi')).toBe(false);
+    expect(isRealPageLink('/profil#sejarah')).toBe(false);
+    expect(isRealPageLink('/profil')).toBe(true);
   });
 });

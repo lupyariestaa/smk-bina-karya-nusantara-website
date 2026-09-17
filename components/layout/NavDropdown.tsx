@@ -3,15 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/Icon';
-import { cn } from '@/lib/utils';
+import { cn, isPathActive, isRealPageLink } from '@/lib/utils';
 import type { NavGroup } from '@/lib/nav';
-
-/** Cek apakah sebuah tautan menunjuk ke halaman yang sedang aktif. */
-function isActivePath(pathname: string, href: string) {
-  const path = href.split('#')[0];
-  if (path === '/') return pathname === '/';
-  return pathname === path || pathname.startsWith(`${path}/`);
-}
 
 /**
  * Grup navigasi desktop dengan dropdown.
@@ -20,7 +13,12 @@ function isActivePath(pathname: string, href: string) {
  */
 export function NavDropdown({ group }: { group: NavGroup }) {
   const pathname = usePathname();
-  const groupActive = group.items.some((item) => isActivePath(pathname, item.href));
+  // Grup dianggap aktif bila halaman saat ini cocok dengan tautan NON-anchor-nya.
+  // Tautan ber-anchor (mis. `/#prestasi`) tidak ikut menentukan agar grup tidak
+  // tersorot saat pengguna berpindah ke halaman lain.
+  const groupActive = group.items.some(
+    (item) => isRealPageLink(item.href) && isPathActive(pathname, item.href),
+  );
 
   const triggerClasses = cn(
     'inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
@@ -68,7 +66,7 @@ export function NavDropdown({ group }: { group: NavGroup }) {
       >
         <ul className="animate-dropdown-in overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5">
           {group.items.map((item) => {
-            const active = isActivePath(pathname, item.href);
+            const active = isRealPageLink(item.href) && isPathActive(pathname, item.href);
             return (
               <li key={`${group.label}-${item.href}`}>
                 <Link
