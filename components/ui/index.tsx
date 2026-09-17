@@ -34,36 +34,63 @@ export function PageHero({
   title,
   description,
   breadcrumb,
+  image,
 }: {
   title: string;
   description?: string;
   breadcrumb?: { label: string; href?: string }[];
+  image?: string;
 }) {
   return (
-    <section className="border-b border-slate-200 bg-slate-50">
-      <div className="container-content py-12 sm:py-16">
+    <section className="relative overflow-hidden border-b border-slate-200 bg-brand-950">
+      {image && (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-950/85 to-brand-900/60" />
+        </>
+      )}
+      <div className="container-content relative py-12 sm:py-20">
         {breadcrumb && breadcrumb.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex flex-wrap items-center gap-1 text-xs text-slate-500">
+            <ol className="flex flex-wrap items-center gap-1 text-xs text-brand-100/80">
               {breadcrumb.map((b, i) => (
                 <li key={b.label} className="flex items-center gap-1">
                   {i > 0 && (
-                    <Icon name="chevronRight" className="h-3 w-3 text-slate-400" />
+                    <Icon name="chevronRight" className="h-3 w-3 text-brand-200/60" />
                   )}
                   {b.href ? (
-                    <Link href={b.href} className="hover:text-brand-700">
+                    <Link href={b.href} className="hover:text-white">
                       {b.label}
                     </Link>
                   ) : (
-                    <span className="text-slate-700">{b.label}</span>
+                    <span className="text-white">{b.label}</span>
                   )}
                 </li>
               ))}
             </ol>
           </nav>
         )}
-        <h1 className="max-w-3xl text-3xl sm:text-4xl lg:text-5xl">{title}</h1>
-        {description && <p className="mt-4 max-w-2xl text-slate-600">{description}</p>}
+        <h1
+          className={cn(
+            'max-w-3xl text-3xl sm:text-4xl lg:text-5xl',
+            image && 'text-white',
+          )}
+        >
+          {title}
+        </h1>
+        {description && (
+          <p
+            className={cn('mt-4 max-w-2xl', image ? 'text-brand-100' : 'text-slate-600')}
+          >
+            {description}
+          </p>
+        )}
       </div>
     </section>
   );

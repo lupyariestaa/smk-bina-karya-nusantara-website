@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui';
 import { Icon } from '@/components/Icon';
-import { sekolah } from '@/lib/data';
+import { sekolah, heroImage } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Kontak',
@@ -19,6 +19,7 @@ export default function KontakPage() {
         title="Kontak & Lokasi"
         description="Hubungi kami atau kunjungi langsung sekolah kami."
         breadcrumb={[{ label: 'Beranda', href: '/' }, { label: 'Kontak' }]}
+        image={heroImage('kontak')}
       />
 
       <section className="section">

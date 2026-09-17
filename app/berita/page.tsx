@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHero, CtaBanner } from '@/components/ui';
-import { beritaList, prestasiList, sekolah } from '@/lib/data';
+import { AppImage } from '@/components/AppImage';
+import { beritaList, prestasiList, sekolah, heroImage } from '@/lib/data';
 import { formatTanggal } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function BeritaPage() {
         title="Berita & Kegiatan"
         description="Ikuti informasi terbaru seputar kegiatan, prestasi, dan pengumuman sekolah."
         breadcrumb={[{ label: 'Beranda', href: '/' }, { label: 'Berita' }]}
+        image={heroImage('berita')}
       />
 
       <section className="section">
@@ -29,18 +31,26 @@ export default function BeritaPage() {
             <Link
               key={b.slug}
               href={`/berita/${b.slug}`}
-              className="card flex flex-col p-6"
+              className="card group flex flex-col overflow-hidden"
             >
-              <span className="badge w-fit">{b.kategori}</span>
-              <h2 className="mt-3 text-lg font-bold text-slate-900 hover:text-brand-700">
-                {b.judul}
-              </h2>
-              <p className="mt-2 line-clamp-3 flex-1 text-sm text-slate-600">
-                {b.ringkasan}
-              </p>
-              <p className="mt-4 text-xs text-slate-500">
-                {formatTanggal(b.tanggal)} · {b.penulis}
-              </p>
+              <AppImage
+                src={b.gambar}
+                alt={b.judul}
+                aspect="aspect-[16/9]"
+                imgClassName="transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <span className="badge w-fit">{b.kategori}</span>
+                <h2 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-brand-700">
+                  {b.judul}
+                </h2>
+                <p className="mt-2 line-clamp-3 flex-1 text-sm text-slate-600">
+                  {b.ringkasan}
+                </p>
+                <p className="mt-4 text-xs text-slate-500">
+                  {formatTanggal(b.tanggal)} · {b.penulis}
+                </p>
+              </div>
             </Link>
           ))}
         </div>

@@ -67,18 +67,32 @@ export function FasilitasGaleri({
 
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {fasilitasTampil.map((f) => (
-            <li key={f.nama} className="card flex items-start gap-4 p-5">
-              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <Icon name={f.ikon} className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="font-semibold text-slate-900">
-                  {f.nama} <span className="text-slate-400">· {f.jumlah}</span>
-                </p>
-                <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-brand-600">
-                  {f.kategori}
-                </p>
-                <p className="mt-1 text-sm text-slate-600">{f.keterangan}</p>
+            <li key={f.nama} className="card overflow-hidden">
+              {f.gambar && (
+                <span className="block aspect-[16/10] overflow-hidden bg-slate-100">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={f.gambar}
+                    alt={f.nama}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                </span>
+              )}
+              <div className="flex items-start gap-4 p-5">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                  <Icon name={f.ikon} className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-semibold text-slate-900">
+                    {f.nama} <span className="text-slate-400">· {f.jumlah}</span>
+                  </p>
+                  <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-brand-600">
+                    {f.kategori}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-600">{f.keterangan}</p>
+                </div>
               </div>
             </li>
           ))}

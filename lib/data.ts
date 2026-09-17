@@ -10,6 +10,7 @@ import kemitraanData from '@/data/kemitraan.json';
 import statistikData from '@/data/statistik.json';
 import ppdbData from '@/data/ppdb.json';
 import beritaData from '@/data/berita.json';
+import imagesData from '@/data/images.json';
 
 import type {
   Sekolah,
@@ -38,6 +39,23 @@ export const kemitraan = kemitraanData as Kemitraan;
 export const statistik = statistikData as Statistik;
 export const ppdb = ppdbData as Ppdb;
 export const beritaList = beritaData as Berita[];
+
+/** Peta gambar (aset lokal di /public/images). */
+export const images = imagesData as {
+  hero: Record<string, string | string[]>;
+  jurusan: Record<string, string>;
+  jurusanGaleri: Record<string, string[]>;
+  fasilitas: Record<string, string>;
+  berita: Record<string, string>;
+  ekstrakurikuler: Record<string, string>;
+  struktur: Record<string, string>;
+};
+
+/** Ambil gambar hero untuk sebuah halaman. */
+export function heroImage(key: keyof typeof images.hero): string {
+  const val = images.hero[key];
+  return Array.isArray(val) ? val[0] : val;
+}
 
 /** Ambil detail jurusan berdasarkan slug. */
 export function getJurusanBySlug(slug: string): Jurusan | undefined {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Icon } from '@/components/Icon';
+import { AppImage } from '@/components/AppImage';
 import { CtaBanner, IconBadge } from '@/components/ui';
 import { jurusanList, getJurusanBySlug } from '@/lib/data';
 
@@ -38,24 +39,36 @@ export default async function JurusanDetailPage({
   return (
     <>
       {/* Hero jurusan */}
-      <section className="border-b border-slate-200 bg-gradient-to-b from-brand-50 to-white">
-        <div className="container-content py-12 sm:py-16">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-brand-950">
+        {jurusan.gambar && (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={jurusan.gambar}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-25"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-950/85 to-brand-900/60" />
+          </>
+        )}
+        <div className="container-content relative py-12 sm:py-16">
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex flex-wrap items-center gap-1 text-xs text-slate-500">
+            <ol className="flex flex-wrap items-center gap-1 text-xs text-brand-100/80">
               <li>
-                <Link href="/" className="hover:text-brand-700">
+                <Link href="/" className="hover:text-white">
                   Beranda
                 </Link>
               </li>
               <li className="flex items-center gap-1">
-                <Icon name="chevronRight" className="h-3 w-3 text-slate-400" />
-                <Link href="/program-keahlian" className="hover:text-brand-700">
+                <Icon name="chevronRight" className="h-3 w-3 text-brand-200/60" />
+                <Link href="/program-keahlian" className="hover:text-white">
                   Program Keahlian
                 </Link>
               </li>
               <li className="flex items-center gap-1">
-                <Icon name="chevronRight" className="h-3 w-3 text-slate-400" />
-                <span className="text-slate-700">{jurusan.singkatan}</span>
+                <Icon name="chevronRight" className="h-3 w-3 text-brand-200/60" />
+                <span className="text-white">{jurusan.singkatan}</span>
               </li>
             </ol>
           </nav>
@@ -63,7 +76,7 @@ export default async function JurusanDetailPage({
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
             <IconBadge name={jurusan.ikon} />
             <div>
-              <h1 className="text-3xl sm:text-4xl">{jurusan.nama}</h1>
+              <h1 className="text-3xl text-white sm:text-4xl">{jurusan.nama}</h1>
               <div className="mt-2 flex flex-wrap gap-2 text-sm">
                 <span className="badge">{jurusan.singkatan}</span>
                 <span className="badge">{jurusan.bidang}</span>
@@ -72,9 +85,28 @@ export default async function JurusanDetailPage({
               </div>
             </div>
           </div>
-          <p className="mt-6 max-w-3xl text-slate-600">{jurusan.deskripsi}</p>
+          <p className="mt-6 max-w-3xl text-brand-100">{jurusan.deskripsi}</p>
         </div>
       </section>
+
+      {/* Galeri jurusan */}
+      {jurusan.galeri && jurusan.galeri.length > 0 && (
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="container-content py-8">
+            <div className="grid gap-4 sm:grid-cols-3">
+              {jurusan.galeri.map((src, i) => (
+                <AppImage
+                  key={`${src}-${i}`}
+                  src={src}
+                  alt={`${jurusan.nama} - foto ${i + 1}`}
+                  aspect="aspect-[4/3]"
+                  className="rounded-2xl"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="container-content grid gap-10 lg:grid-cols-3">

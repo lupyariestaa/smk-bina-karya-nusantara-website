@@ -89,6 +89,14 @@ Konten dikelola melalui file JSON di folder [`data/`](./data):
 
 Setelah mengubah JSON, jalankan `npm run build` untuk membangun ulang situs.
 
+### Gambar
+
+Gambar tersimpan lokal di `public/images/` (dari Wikimedia Commons, lihat
+[`public/images/CREDITS.md`](./public/images/CREDITS.md)). Peta gambar dikonfigurasi di
+`data/images.json` dan dihubungkan ke data melalui field `gambar`/`galeri`.
+
+Untuk mengunduh ulang gambar: `powershell -ExecutionPolicy Bypass -File scripts/download-images.ps1`
+
 > ⚠️ **PPDB:** website ini hanya menampilkan **informasi** PPDB. Tidak ada form pendaftaran online.
 
 ## 🔐 Keamanan

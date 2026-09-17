@@ -1,107 +1,122 @@
-[
+﻿[
   {
     "nama": "Ruang Kelas",
     "jumlah": 36,
     "kategori": "Akademik",
     "keterangan": "Ber-AC, proyektor, smart TV",
-    "ikon": "classroom"
+    "ikon": "classroom",
+    "gambar": "/images/fasilitas/fasilitas-1-1.jpg"
   },
   {
     "nama": "Bengkel Praktik TKJ",
     "jumlah": 3,
     "kategori": "Laboratorium",
-    "keterangan": "Lab jaringan & server",
-    "ikon": "network"
+    "keterangan": "Lab jaringan \u0026 server",
+    "ikon": "network",
+    "gambar": "/images/fasilitas/fasilitas-2-1.jpg"
   },
   {
     "nama": "Lab Komputer RPL",
     "jumlah": 4,
     "kategori": "Laboratorium",
     "keterangan": "40 PC per lab, koneksi internet",
-    "ikon": "code"
+    "ikon": "code",
+    "gambar": "/images/fasilitas/fasilitas-2-2.jpg"
   },
   {
     "nama": "Bengkel Otomotif",
     "jumlah": 3,
     "kategori": "Laboratorium",
     "keterangan": "Lift, alat diagnosa modern",
-    "ikon": "car"
+    "ikon": "car",
+    "gambar": "/images/jurusan/jurusan-3-2.jpg"
   },
   {
     "nama": "Lab Akuntansi",
     "jumlah": 2,
     "kategori": "Laboratorium",
-    "keterangan": "Komputer akuntansi & perpajakan",
-    "ikon": "calculator"
+    "keterangan": "Komputer akuntansi \u0026 perpajakan",
+    "ikon": "calculator",
+    "gambar": "/images/fasilitas/fasilitas-2-3.jpg"
   },
   {
     "nama": "Studio Bisnis Digital",
     "jumlah": 1,
     "kategori": "Laboratorium",
-    "keterangan": "Setup konten kreator & live streaming",
-    "ikon": "megaphone"
+    "keterangan": "Setup konten kreator \u0026 live streaming",
+    "ikon": "megaphone",
+    "gambar": "/images/berita/berita-5-1.jpg"
   },
   {
     "nama": "Perpustakaan",
     "jumlah": 1,
     "kategori": "Akademik",
-    "keterangan": "± 8.000 koleksi buku & e-book",
-    "ikon": "book"
+    "keterangan": "Â± 8.000 koleksi buku \u0026 e-book",
+    "ikon": "book",
+    "gambar": "/images/fasilitas/fasilitas-3-1.jpg"
   },
   {
     "nama": "Aula / Hall",
     "jumlah": 1,
     "kategori": "Umum",
     "keterangan": "Kapasitas 800 orang",
-    "ikon": "hall"
+    "ikon": "hall",
+    "gambar": "/images/galeri/galeri-8-1.jpg"
   },
   {
     "nama": "Masjid / Musala",
     "jumlah": 1,
     "kategori": "Umum",
     "keterangan": "Kapasitas 500 orang",
-    "ikon": "mosque"
+    "ikon": "mosque",
+    "gambar": "/images/fasilitas/fasilitas-6-2.jpg"
   },
   {
     "nama": "Lapangan Olahraga",
     "jumlah": 3,
     "kategori": "Olahraga",
     "keterangan": "Futsal, basket, voli",
-    "ikon": "sport"
+    "ikon": "sport",
+    "gambar": "/images/fasilitas/fasilitas-4-1.jpg"
   },
   {
     "nama": "Ruang UKS",
     "jumlah": 1,
     "kategori": "Umum",
     "keterangan": "Dilengkapi tenaga medis",
-    "ikon": "health"
+    "ikon": "health",
+    "gambar": "/images/fasilitas/fasilitas-1-2.jpg"
   },
   {
     "nama": "Kantin",
     "jumlah": 2,
     "kategori": "Umum",
-    "keterangan": "Kantin sehat & kantin siswa",
-    "ikon": "food"
+    "keterangan": "Kantin sehat \u0026 kantin siswa",
+    "ikon": "food",
+    "gambar": "/images/fasilitas/fasilitas-5-2.jpg"
   },
   {
     "nama": "Teaching Factory",
     "jumlah": 1,
     "kategori": "Laboratorium",
     "keterangan": "Unit produksi terintegrasi",
-    "ikon": "factory"
+    "ikon": "factory",
+    "gambar": "/images/jurusan/jurusan-3-3.jpg"
   },
   {
     "nama": "Area Parkir",
     "jumlah": 2,
     "kategori": "Umum",
-    "keterangan": "Parkir siswa & guru",
-    "ikon": "parking"
+    "keterangan": "Parkir siswa \u0026 guru",
+    "ikon": "parking",
+    "gambar": "/images/hero/hero-2-1.jpg"
   },
   {
     "nama": "Ruang BK",
     "jumlah": 1,
     "kategori": "Akademik",
     "keterangan": "Bimbingan konseling",
-    "ikon": "counseling"
+    "ikon": "counseling",
+    "gambar": "/images/struktur/struktur-2-1.jpg"
   }
 ]

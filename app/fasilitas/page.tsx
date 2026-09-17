@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
 import { PageHero, CtaBanner } from '@/components/ui';
+import { AppImage } from '@/components/AppImage';
 import { FasilitasGaleri } from '@/components/FasilitasGaleri';
 import { Icon } from '@/components/Icon';
-import { fasilitasList, galeriList, ekstrakurikulerList, sekolah } from '@/lib/data';
+import {
+  fasilitasList,
+  galeriList,
+  ekstrakurikulerList,
+  sekolah,
+  heroImage,
+} from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Fasilitas & Galeri',
@@ -17,6 +24,7 @@ export default function FasilitasPage() {
         title="Fasilitas & Galeri"
         description="Sarana dan prasarana pendukung pembelajaran, serta dokumentasi kegiatan sekolah."
         breadcrumb={[{ label: 'Beranda', href: '/' }, { label: 'Fasilitas & Galeri' }]}
+        image={heroImage('fasilitas')}
       />
 
       <section className="section">
@@ -34,12 +42,17 @@ export default function FasilitasPage() {
           </p>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {ekstrakurikulerList.map((e) => (
-              <li key={e.nama} className="card p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="font-bold text-slate-900">{e.nama}</h3>
-                  <span className="badge shrink-0">{e.kategori}</span>
+              <li key={e.nama} className="card overflow-hidden">
+                {e.gambar && (
+                  <AppImage src={e.gambar} alt={e.nama} aspect="aspect-[16/10]" />
+                )}
+                <div className="p-5">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="font-bold text-slate-900">{e.nama}</h3>
+                    <span className="badge shrink-0">{e.kategori}</span>
+                  </div>
+                  <p className="mt-2 text-sm text-slate-600">{e.deskripsi}</p>
                 </div>
-                <p className="mt-2 text-sm text-slate-600">{e.deskripsi}</p>
               </li>
             ))}
           </ul>

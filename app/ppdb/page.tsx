@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHero, CtaBanner, SectionHeading } from '@/components/ui';
 import { Icon } from '@/components/Icon';
-import { ppdb, sekolah } from '@/lib/data';
+import { ppdb, sekolah, heroImage } from '@/lib/data';
 import { formatTanggal } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -21,6 +21,7 @@ export default function PpdbPage() {
         title={`PPDB ${ppdb.tahunAjaran}`}
         description={`Informasi Penerimaan Peserta Didik Baru ${sekolah.nama}. Periode pendaftaran: ${ppdb.periode}.`}
         breadcrumb={[{ label: 'Beranda', href: '/' }, { label: 'PPDB' }]}
+        image={heroImage('ppdb')}
       />
 
       {/* Perhatian penting (tanpa form pendaftaran) */}

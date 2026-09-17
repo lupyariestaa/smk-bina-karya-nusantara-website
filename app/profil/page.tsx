@@ -1,7 +1,16 @@
 import type { Metadata } from 'next';
-import { PageHero, SectionHeading, CtaBanner, IconBadge } from '@/components/ui';
+import { PageHero, SectionHeading, CtaBanner } from '@/components/ui';
+import { AppImage } from '@/components/AppImage';
 import { Icon } from '@/components/Icon';
-import { profil, sekolah, strukturList, statistik, kemitraan } from '@/lib/data';
+import {
+  profil,
+  sekolah,
+  strukturList,
+  statistik,
+  kemitraan,
+  images,
+  heroImage,
+} from '@/lib/data';
 import { formatAngka } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -28,6 +37,7 @@ export default function ProfilPage() {
         title="Profil Sekolah"
         description={`Mengenal lebih dekat ${sekolah.nama} — mulai dari sejarah, visi & misi, hingga struktur organisasi.`}
         breadcrumb={[{ label: 'Beranda', href: '/' }, { label: 'Profil' }]}
+        image={heroImage('profil')}
       />
 
       {/* Identitas umum */}
@@ -56,8 +66,13 @@ export default function ProfilPage() {
         <div className="container-content">
           <div className="grid gap-8 lg:grid-cols-3">
             <div>
-              <IconBadge name="users" />
-              <h2 className="mt-4 text-2xl">Sambutan Kepala Sekolah</h2>
+              <AppImage
+                src={images.struktur.kepalaSekolah}
+                alt={profil.sambutanKepalaSekolah.nama}
+                aspect="aspect-[4/3]"
+                className="mb-4 rounded-2xl"
+              />
+              <h2 className="text-2xl">Sambutan Kepala Sekolah</h2>
               <p className="mt-2 text-sm text-slate-500">
                 {profil.sambutanKepalaSekolah.nama}
                 <br />
@@ -68,6 +83,12 @@ export default function ProfilPage() {
               <blockquote className="card p-6 text-slate-600">
                 &ldquo;{profil.sambutanKepalaSekolah.isi}&rdquo;
               </blockquote>
+              <AppImage
+                src={images.struktur.rapat}
+                alt="Rapat bersama pimpinan dan guru"
+                aspect="aspect-[16/9]"
+                className="mt-6 rounded-2xl"
+              />
             </div>
           </div>
         </div>

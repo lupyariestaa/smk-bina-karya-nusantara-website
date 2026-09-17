@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Icon } from '@/components/Icon';
+import { AppImage } from '@/components/AppImage';
 import { CtaBanner } from '@/components/ui';
 import { beritaList, getBeritaBySlug } from '@/lib/data';
 import { formatTanggal } from '@/lib/utils';
@@ -76,6 +77,13 @@ export default async function BeritaDetailPage({
 
         <section className="section">
           <div className="container-content max-w-3xl">
+            <AppImage
+              src={berita.gambar}
+              alt={berita.judul}
+              aspect="aspect-[16/9]"
+              priority
+              className="mb-8 rounded-2xl"
+            />
             <div className="prose-content">
               {berita.isi.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -98,14 +106,26 @@ export default async function BeritaDetailPage({
             <h2 className="text-2xl">Berita Lainnya</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-3">
               {lain.map((b) => (
-                <Link key={b.slug} href={`/berita/${b.slug}`} className="card p-6">
-                  <span className="badge w-fit">{b.kategori}</span>
-                  <h3 className="mt-3 font-bold text-slate-900 hover:text-brand-700">
-                    {b.judul}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-slate-600">
-                    {b.ringkasan}
-                  </p>
+                <Link
+                  key={b.slug}
+                  href={`/berita/${b.slug}`}
+                  className="card group overflow-hidden"
+                >
+                  <AppImage
+                    src={b.gambar}
+                    alt={b.judul}
+                    aspect="aspect-[16/9]"
+                    imgClassName="transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="p-6">
+                    <span className="badge w-fit">{b.kategori}</span>
+                    <h3 className="mt-3 font-bold text-slate-900 group-hover:text-brand-700">
+                      {b.judul}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-slate-600">
+                      {b.ringkasan}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -71,6 +71,8 @@ export interface Jurusan {
   durasi: string;
   akreditasi: string;
   ikon: string;
+  gambar?: string;
+  galeri?: string[];
   deskripsi: string;
   kompetensi: string[];
   prospekKarier: string[];
@@ -84,6 +86,7 @@ export interface Fasilitas {
   kategori: string;
   keterangan: string;
   ikon: string;
+  gambar?: string;
 }
 
 export interface GaleriItem {
@@ -106,6 +109,7 @@ export interface Ekstrakurikuler {
   nama: string;
   kategori: string;
   deskripsi: string;
+  gambar?: string;
 }
 
 export interface StrukturItem {
@@ -188,5 +192,6 @@ export interface Berita {
   tanggal: string;
   penulis: string;
   ringkasan: string;
+  gambar: string;
   isi: string[];
 }
