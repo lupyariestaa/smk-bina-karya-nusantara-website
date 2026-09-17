@@ -52,7 +52,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // Static site ini tidak memakai Next.js Image Optimization server,
+    // sehingga dependency native `sharp` tidak diperlukan saat build/deploy.
+    unoptimized: true,
   },
   async headers() {
     return [
