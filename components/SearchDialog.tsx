@@ -134,7 +134,7 @@ export function SearchDialog({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Cari jurusan, berita, fasilitas…"
-            className="w-full bg-transparent py-4 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+            className="w-full bg-transparent py-4 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
             aria-label="Kata kunci pencarian"
             role="combobox"
             aria-expanded={results.length > 0}
