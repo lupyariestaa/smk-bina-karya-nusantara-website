@@ -1,5 +1,7 @@
 import sekolahData from '@/data/sekolah.json';
 import profilData from '@/data/profil.json';
+import sejarahData from '@/data/sejarah.json';
+import visiMisiData from '@/data/visi-misi.json';
 import jurusanData from '@/data/jurusan.json';
 import fasilitasData from '@/data/fasilitas.json';
 import galeriData from '@/data/galeri.json';
@@ -15,6 +17,8 @@ import imagesData from '@/data/images.json';
 import type {
   Sekolah,
   Profil,
+  Sejarah,
+  VisiMisi,
   Jurusan,
   Fasilitas,
   GaleriItem,
@@ -29,6 +33,8 @@ import type {
 
 export const sekolah = sekolahData as Sekolah;
 export const profil = profilData as Profil;
+export const sejarah = sejarahData as Sejarah;
+export const visiMisi = visiMisiData as VisiMisi;
 export const jurusanList = jurusanData as Jurusan[];
 export const fasilitasList = fasilitasData as Fasilitas[];
 export const galeriList = galeriData as GaleriItem[];

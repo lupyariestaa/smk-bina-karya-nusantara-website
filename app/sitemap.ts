@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
     '/profil',
+    '/sejarah',
+    '/visi-misi',
     '/program-keahlian',
     '/fasilitas',
     '/ppdb',

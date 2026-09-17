@@ -5,6 +5,8 @@ import {
   ekstrakurikulerList,
   prestasiList,
   profil,
+  sejarah,
+  visiMisi,
 } from './data';
 import type { SearchEntry } from '@/components/SearchDialog';
 
@@ -24,15 +26,15 @@ export function buildSearchIndex(): SearchEntry[] {
     },
     {
       title: 'Visi & Misi',
-      href: '/profil#visi-misi',
+      href: '/visi-misi',
       category: 'Profil',
-      text: profil.visi,
+      text: `${visiMisi.visi} ${profil.misi.join(' ')} ${profil.tujuan.join(' ')} ${visiMisi.nilai.map((n) => `${n.nama} ${n.deskripsi}`).join(' ')}`,
     },
     {
       title: 'Sejarah Sekolah',
-      href: '/profil#sejarah',
+      href: '/sejarah',
       category: 'Profil',
-      text: profil.sejarah.join(' '),
+      text: `${sejarah.ringkasan} ${sejarah.timeline.map((t) => `${t.tahun} ${t.judul} ${t.deskripsi}`).join(' ')}`,
     },
     {
       title: 'Program Keahlian',

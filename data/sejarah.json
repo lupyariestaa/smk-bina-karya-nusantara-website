@@ -1,0 +1,63 @@
+{
+  "ringkasan": "Perjalanan SMK Bina Karya Nusantara dari sebuah yayasan pendidikan vokasi kecil pada 2004 hingga menjadi sekolah rujukan dengan akreditasi A (Unggul).",
+  "timeline": [
+    {
+      "tahun": 2004,
+      "judul": "Berdirinya Sekolah",
+      "deskripsi": "SMK Bina Karya Nusantara berdiri di bawah naungan Yayasan Pendidikan Bina Karya Nusantara dengan 2 rombongan belajar dan 3 program keahlian perdana.",
+      "gambar": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=70"
+    },
+    {
+      "tahun": 2008,
+      "judul": "Gedung Pertama Diresmikan",
+      "deskripsi": "Pembangunan gedung utama selesai dan diresmikan, menandai dimulainya penyelenggaraan pembelajaran dengan fasilitas yang lebih layak.",
+      "gambar": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=70"
+    },
+    {
+      "tahun": 2010,
+      "judul": "Program Keahlian Teknologi Informasi",
+      "deskripsi": "Sekolah menambah program keahlian Teknik Komputer dan Jaringan seiring meningkatnya kebutuhan industri teknologi informasi di tanah air.",
+      "gambar": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70"
+    },
+    {
+      "tahun": 2016,
+      "judul": "Teaching Factory",
+      "deskripsi": "Gedung baru untuk bengkel praktik (teaching factory) selesai dibangun, memperkuat pembelajaran berbasis praktik dan produksi nyata.",
+      "gambar": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=70"
+    },
+    {
+      "tahun": 2020,
+      "judul": "Akreditasi A (Unggul)",
+      "deskripsi": "Sekolah meraih akreditasi A (Unggul) dan mulai menerapkan Kurikulum Merdeka untuk memperkuat karakter serta kompetensi peserta didik.",
+      "gambar": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=70"
+    },
+    {
+      "tahun": 2024,
+      "judul": "Sekolah Rujukan Vokasi",
+      "deskripsi": "Kini sekolah memiliki 6 program keahlian dengan lebih dari 1.200 siswa aktif dan telah meluluskan ribuan alumni yang bekerja di berbagai industri nasional.",
+      "gambar": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=70"
+    }
+  ],
+  "nilaiLuhur": [
+    {
+      "nama": "Berakhlak Mulia",
+      "deskripsi": "Menempatkan nilai religius, kejujuran, dan integritas sebagai fondasi setiap lulusan.",
+      "ikon": "mosque"
+    },
+    {
+      "nama": "Kompeten",
+      "deskripsi": "Membekali peserta didik dengan keterampilan teknis yang relevan dengan kebutuhan industri.",
+      "ikon": "briefcase"
+    },
+    {
+      "nama": "Berjiwa Wirausaha",
+      "deskripsi": "Menumbuhkan kemandirian dan mentalitas entrepreneur melalui unit produksi sekolah.",
+      "ikon": "sparkle"
+    },
+    {
+      "nama": "Berdaya Saing Global",
+      "deskripsi": "Menyiapkan generasi yang siap bersaing di dunia kerja nasional maupun internasional.",
+      "ikon": "target"
+    }
+  ]
+}

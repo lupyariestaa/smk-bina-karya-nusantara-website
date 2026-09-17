@@ -63,6 +63,38 @@ export interface Profil {
   };
 }
 
+export interface SejarahTimeline {
+  tahun: number;
+  judul: string;
+  deskripsi: string;
+  gambar: string;
+}
+
+export interface NilaiLuhur {
+  nama: string;
+  deskripsi: string;
+  ikon: string;
+}
+
+export interface Sejarah {
+  ringkasan: string;
+  timeline: SejarahTimeline[];
+  nilaiLuhur: NilaiLuhur[];
+}
+
+export interface VisiMisiNilai {
+  nama: string;
+  deskripsi: string;
+  ikon: string;
+}
+
+export interface VisiMisi {
+  ringkasan: string;
+  visi: string;
+  misiJudul: string;
+  nilai: VisiMisiNilai[];
+}
+
 export interface Jurusan {
   slug: string;
   nama: string;

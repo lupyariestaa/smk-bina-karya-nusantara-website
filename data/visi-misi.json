@@ -1,0 +1,37 @@
+{
+  "ringkasan": "Visi, misi, dan tujuan SMK Bina Karya Nusantara menjadi arah dalam menyelenggarakan pendidikan vokasi yang berkualitas.",
+  "visi": "Terwujudnya lulusan SMK yang berakhlak mulia, kompeten, berjiwa wirausaha, dan berdaya saing global.",
+  "misiJudul": "Misi Sekolah",
+  "nilai": [
+    {
+      "nama": "Religius",
+      "deskripsi": "Menanamkan nilai keimanan dan ketakwaan dalam setiap aktivitas pembelajaran.",
+      "ikon": "mosque"
+    },
+    {
+      "nama": "Integritas",
+      "deskripsi": "Menjunjung kejujuran, tanggung jawab, dan etika kerja profesional.",
+      "ikon": "check"
+    },
+    {
+      "nama": "Profesional",
+      "deskripsi": "Membiasakan budaya kerja disiplin, tepat waktu, dan berorientasi mutu.",
+      "ikon": "briefcase"
+    },
+    {
+      "nama": "Kolaboratif",
+      "deskripsi": "Membangun kerja sama tim dan kemitraan dengan dunia usaha serta industri.",
+      "ikon": "users"
+    },
+    {
+      "nama": "Inovatif",
+      "deskripsi": "Mendorong kreativitas dan adaptasi terhadap perkembangan teknologi.",
+      "ikon": "sparkle"
+    },
+    {
+      "nama": "Berkelanjutan",
+      "deskripsi": "Mengembangkan kompetensi secara terus-menerus untuk menghadapi tantangan global.",
+      "ikon": "target"
+    }
+  ]
+}

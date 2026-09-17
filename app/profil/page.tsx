@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PageHero, SectionHeading, CtaBanner } from '@/components/ui';
 import { AppImage } from '@/components/AppImage';
 import { Icon } from '@/components/Icon';
@@ -29,6 +30,34 @@ const identitasUmum = [
   { label: 'Tahun Berdiri', value: String(sekolah.tahunBerdiri) },
   { label: 'Kurikulum', value: sekolah.kurikulum },
   { label: 'Kepala Sekolah', value: sekolah.kepalaSekolah },
+];
+
+/** Pintasan ke halaman-halaman profil turunan. */
+const pintasanProfil = [
+  {
+    label: 'Sejarah',
+    href: '/sejarah',
+    icon: 'clock',
+    deskripsi: 'Perjalanan dan tonggak berdirinya sekolah sejak 2004.',
+  },
+  {
+    label: 'Visi & Misi',
+    href: '/visi-misi',
+    icon: 'target',
+    deskripsi: 'Arah, komitmen, dan nilai-nilai pendidikan kami.',
+  },
+  {
+    label: 'Fasilitas & Galeri',
+    href: '/fasilitas',
+    icon: 'hall',
+    deskripsi: 'Sarana prasarana dan galeri kegiatan sekolah.',
+  },
+  {
+    label: 'Struktur Organisasi',
+    href: '/profil#struktur',
+    icon: 'users',
+    deskripsi: 'Susunan pimpinan dan penanggung jawab program.',
+  },
 ];
 
 export default function ProfilPage() {
@@ -76,8 +105,39 @@ export default function ProfilPage() {
         </div>
       </section>
 
-      {/* Sambutan kepala sekolah */}
+      {/* Pintasan halaman profil */}
       <section className="section bg-slate-50">
+        <div className="container-content">
+          <SectionHeading
+            eyebrow="Jelajahi"
+            title="Kenali Sekolah Lebih Dalam"
+            description="Beberapa halaman yang membahas profil sekolah secara lebih rinci."
+          />
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {pintasanProfil.map((p) => (
+              <Link key={p.href} href={p.href} className="card group flex flex-col p-6">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-700 transition-colors group-hover:bg-brand-600 group-hover:text-white">
+                  <Icon name={p.icon} className="h-6 w-6" />
+                </span>
+                <h3 className="mt-4 font-bold text-slate-900 group-hover:text-brand-700">
+                  {p.label}
+                </h3>
+                <p className="mt-2 flex-1 text-sm text-slate-600">{p.deskripsi}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-700">
+                  Lihat
+                  <Icon
+                    name="arrowRight"
+                    className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                  />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sambutan kepala sekolah */}
+      <section className="section">
         <div className="container-content">
           <div className="grid gap-8 lg:grid-cols-3">
             <div>
@@ -109,70 +169,8 @@ export default function ProfilPage() {
         </div>
       </section>
 
-      {/* Sejarah */}
-      <section id="sejarah" className="section scroll-mt-24">
-        <div className="container-content grid gap-10 lg:grid-cols-3">
-          <div>
-            <SectionHeading eyebrow="Sejarah" title="Perjalanan Sekolah" as="h2" />
-          </div>
-          <div className="prose-content lg:col-span-2">
-            {profil.sejarah.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Visi & Misi */}
-      <section id="visi-misi" className="section scroll-mt-24 bg-slate-50">
-        <div className="container-content">
-          <SectionHeading
-            eyebrow="Visi & Misi"
-            title="Arah dan Komitmen Sekolah"
-            align="center"
-          />
-          <div className="mx-auto mt-10 max-w-3xl">
-            <div className="card border-brand-200 bg-white p-6 text-center">
-              <Icon name="target" className="mx-auto h-8 w-8 text-brand-600" />
-              <h3 className="mt-3 text-xl">Visi</h3>
-              <p className="mt-2 text-slate-600">{profil.visi}</p>
-            </div>
-          </div>
-
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="text-xl">Misi</h3>
-              <ol className="mt-4 space-y-3">
-                {profil.misi.map((m, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">
-                      {i + 1}
-                    </span>
-                    <span className="text-sm text-slate-600">{m}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-            <div>
-              <h3 className="text-xl">Tujuan</h3>
-              <ul className="mt-4 space-y-3">
-                {profil.tujuan.map((t, i) => (
-                  <li key={i} className="flex gap-3">
-                    <Icon
-                      name="check"
-                      className="mt-0.5 h-5 w-5 shrink-0 text-brand-600"
-                    />
-                    <span className="text-sm text-slate-600">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Statistik */}
-      <section className="section">
+      <section className="section bg-slate-50">
         <div className="container-content">
           <SectionHeading eyebrow="Data" title="Sekolah dalam Angka" />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -200,7 +198,7 @@ export default function ProfilPage() {
       </section>
 
       {/* Struktur organisasi */}
-      <section className="section bg-slate-50">
+      <section id="struktur" className="section scroll-mt-24">
         <div className="container-content">
           <SectionHeading
             eyebrow="Struktur"
@@ -221,7 +219,7 @@ export default function ProfilPage() {
       </section>
 
       {/* Kemitraan */}
-      <section className="section">
+      <section className="section bg-slate-50">
         <div className="container-content">
           <SectionHeading
             eyebrow="Kemitraan"

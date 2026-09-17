@@ -36,13 +36,13 @@ export const navGroups: NavGroup[] = [
       },
       {
         label: 'Sejarah',
-        href: '/profil#sejarah',
+        href: '/sejarah',
         icon: 'clock',
         description: 'Perjalanan dan tonggak berdirinya sekolah',
       },
       {
         label: 'Visi & Misi',
-        href: '/profil#visi-misi',
+        href: '/visi-misi',
         icon: 'target',
         description: 'Arah dan tujuan pendidikan kami',
       },

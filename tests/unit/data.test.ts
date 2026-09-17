@@ -22,6 +22,13 @@ describe('buildSearchIndex', () => {
     const jurusanEntries = index.filter((e) => e.category === 'Jurusan');
     expect(jurusanEntries.length).toBe(6);
   });
+
+  it('mengarahkan sejarah & visi misi ke halaman tersendiri', () => {
+    const sejarah = index.find((e) => e.title === 'Sejarah Sekolah');
+    const visiMisi = index.find((e) => e.title === 'Visi & Misi');
+    expect(sejarah?.href).toBe('/sejarah');
+    expect(visiMisi?.href).toBe('/visi-misi');
+  });
 });
 
 describe('getJurusanBySlug', () => {
