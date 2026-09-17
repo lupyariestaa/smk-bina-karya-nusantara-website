@@ -25,18 +25,18 @@ npm start
 
 ## 📜 Scripts
 
-| Script | Fungsi |
-| --- | --- |
-| `npm run dev` | Development server |
-| `npm run build` | Build produksi (static) |
-| `npm start` | Jalankan hasil build |
-| `npm run lint` | ESLint |
-| `npm run format` | Prettier (write) |
-| `npm run format:check` | Prettier (check) |
-| `npm run typecheck` | TypeScript type check |
-| `npm run test` | Unit test (Vitest) |
-| `npm run test:watch` | Unit test (watch) |
-| `npm run test:e2e` | E2E test (Playwright) |
+| Script                 | Fungsi                  |
+| ---------------------- | ----------------------- |
+| `npm run dev`          | Development server      |
+| `npm run build`        | Build produksi (static) |
+| `npm start`            | Jalankan hasil build    |
+| `npm run lint`         | ESLint                  |
+| `npm run format`       | Prettier (write)        |
+| `npm run format:check` | Prettier (check)        |
+| `npm run typecheck`    | TypeScript type check   |
+| `npm run test`         | Unit test (Vitest)      |
+| `npm run test:watch`   | Unit test (watch)       |
+| `npm run test:e2e`     | E2E test (Playwright)   |
 
 ## 🗂️ Struktur Folder
 
@@ -72,20 +72,20 @@ npm start
 
 Konten dikelola melalui file JSON di folder [`data/`](./data):
 
-| File | Isi |
-| --- | --- |
-| `sekolah.json` | Identitas umum, alamat, kontak, sosial media |
-| `profil.json` | Sejarah, visi, misi, tujuan, sambutan |
-| `jurusan.json` | 6 program keahlian |
-| `fasilitas.json` | Fasilitas sekolah |
-| `galeri.json` | Item galeri |
-| `prestasi.json` | Daftar prestasi |
-| `ekstrakurikuler.json` | Ekstrakurikuler |
-| `struktur.json` | Struktur organisasi |
-| `kemitraan.json` | Mitra DUDI & PT |
-| `statistik.json` | Data tenaga pendidik & siswa |
-| `ppdb.json` | Informasi & pengumuman PPDB |
-| `berita.json` | Artikel berita |
+| File                   | Isi                                          |
+| ---------------------- | -------------------------------------------- |
+| `sekolah.json`         | Identitas umum, alamat, kontak, sosial media |
+| `profil.json`          | Sejarah, visi, misi, tujuan, sambutan        |
+| `jurusan.json`         | 6 program keahlian                           |
+| `fasilitas.json`       | Fasilitas sekolah                            |
+| `galeri.json`          | Item galeri                                  |
+| `prestasi.json`        | Daftar prestasi                              |
+| `ekstrakurikuler.json` | Ekstrakurikuler                              |
+| `struktur.json`        | Struktur organisasi                          |
+| `kemitraan.json`       | Mitra DUDI & PT                              |
+| `statistik.json`       | Data tenaga pendidik & siswa                 |
+| `ppdb.json`            | Informasi & pengumuman PPDB                  |
+| `berita.json`          | Artikel berita                               |
 
 Setelah mengubah JSON, jalankan `npm run build` untuk membangun ulang situs.
 
