@@ -123,7 +123,7 @@ export function SearchDialog({
       onClick={onClose}
     >
       <div
-        className="animate-dropdown-in flex max-h-[calc(100dvh-2rem)] w-full max-w-xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-900/5"
+        className="animate-dropdown-in flex max-h-[calc(100dvh-2rem)] w-full max-w-xl flex-col overflow-hidden rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-slate-900/5 sm:p-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex shrink-0 items-center gap-3 border-b border-slate-200 px-4">
