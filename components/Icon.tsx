@@ -198,6 +198,13 @@ const paths: Record<string, React.ReactNode> = {
       <path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1" />
     </>
   ),
+  plus: <path d="M12 5v14M5 12h14" />,
+  minus: <path d="M5 12h14" />,
+  maximize: (
+    <>
+      <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M3 16v3a2 2 0 0 0 2 2h3" />
+    </>
+  ),
 };
 
 export interface IconProps2 extends IconProps {

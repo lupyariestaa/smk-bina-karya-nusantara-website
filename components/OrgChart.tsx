@@ -31,6 +31,7 @@ function PersonCard({
           height={72}
           loading="lazy"
           decoding="async"
+          draggable={false}
           className="h-16 w-16 rounded-full border-2 border-brand-100 object-cover sm:h-[72px] sm:w-[72px]"
         />
         <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-brand-600 text-[9px] font-bold text-white">
@@ -79,8 +80,8 @@ function ChartNode({
 
 export function OrgChart({ root }: { root: StaffNode }) {
   return (
-    <div className="org-chart w-full overflow-x-auto pb-4">
-      <ul className="flex min-w-full flex-col items-center lg:min-w-max">
+    <div className="org-chart w-max">
+      <ul className="flex flex-col items-center lg:min-w-max">
         <ChartNode node={root} isRoot />
       </ul>
     </div>

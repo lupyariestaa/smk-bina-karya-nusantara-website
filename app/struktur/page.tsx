@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHero, SectionHeading, CtaBanner } from '@/components/ui';
 import { OrgChart } from '@/components/OrgChart';
+import { OrgCanvas } from '@/components/OrgCanvas';
 import { Icon } from '@/components/Icon';
 import { staffStruktur, sekolah, strukturList, images } from '@/lib/data';
 
@@ -71,11 +72,10 @@ export default function StrukturPage() {
             description="Dari Kepala Sekolah hingga guru dan tenaga kependidikan."
           />
           <div className="mt-10">
-            <OrgChart root={staffStruktur.root} />
+            <OrgCanvas>
+              <OrgChart root={staffStruktur.root} />
+            </OrgCanvas>
           </div>
-          <p className="mt-6 text-center text-xs text-slate-400">
-            Geser ke samping untuk melihat seluruh bagan pada layar kecil.
-          </p>
         </div>
       </section>
 
