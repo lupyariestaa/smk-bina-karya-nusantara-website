@@ -3,20 +3,23 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navItems } from '@/lib/nav';
+import { directNavItems, navGroups } from '@/lib/nav';
 import { sekolah } from '@/lib/data';
 import { Icon } from '@/components/Icon';
 import { Logo } from '@/components/Logo';
 import { SearchButton } from '@/components/SearchDialog';
+import { NavDropdown } from '@/components/layout/NavDropdown';
 import { cn } from '@/lib/utils';
 import type { SearchEntry } from '@/components/SearchDialog';
 
 export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setMenuOpen(false);
+    setOpenGroup(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -44,13 +47,15 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
             <span className="text-sm font-bold text-slate-900 sm:text-base">
               {sekolah.namaSingkat}
             </span>
-            <span className="hidden text-[11px] text-slate-500 sm:block">{sekolah.nama}</span>
+            <span className="hidden text-[11px] text-slate-500 sm:block">
+              {sekolah.nama}
+            </span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav aria-label="Navigasi utama" className="hidden items-center gap-1 xl:flex">
-          {navItems.map((item) => {
+          {directNavItems.map((item) => {
             const active =
               item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
             return (
@@ -69,6 +74,9 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
               </Link>
             );
           })}
+          {navGroups.map((group) => (
+            <NavDropdown key={group.label} group={group} />
+          ))}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -96,10 +104,10 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
         <nav
           id="menu-mobile"
           aria-label="Navigasi mobile"
-          className="border-t border-slate-200 bg-white xl:hidden"
+          className="animate-menu-in max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-slate-200 bg-white xl:hidden"
         >
           <ul className="container-content flex flex-col py-3">
-            {navItems.map((item) => {
+            {directNavItems.map((item) => {
               const active =
                 item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
               return (
@@ -119,6 +127,69 @@ export function Header({ searchEntries }: { searchEntries?: SearchEntry[] }) {
                 </li>
               );
             })}
+
+            {navGroups.map((group) => {
+              const isOpen = openGroup === group.label;
+              const groupActive = group.items.some((item) =>
+                item.href.split('#')[0] === '/'
+                  ? pathname === '/'
+                  : pathname.startsWith(item.href.split('#')[0]),
+              );
+              return (
+                <li key={group.label} className="border-t border-slate-100">
+                  <button
+                    type="button"
+                    onClick={() => setOpenGroup(isOpen ? null : group.label)}
+                    aria-expanded={isOpen}
+                    className={cn(
+                      'flex w-full items-center justify-between rounded-lg px-3 py-3 text-sm font-medium',
+                      groupActive ? 'text-brand-700' : 'text-slate-700',
+                    )}
+                  >
+                    {group.label}
+                    <Icon
+                      name="chevronRight"
+                      className={cn(
+                        'h-4 w-4 rotate-90 transition-transform duration-200',
+                        isOpen && 'rotate-[270deg]',
+                      )}
+                    />
+                  </button>
+                  {isOpen && (
+                    <ul className="animate-menu-in mb-1 ml-3 flex flex-col gap-0.5 border-l border-slate-200 pl-3">
+                      {group.items.map((item) => {
+                        const path = item.href.split('#')[0];
+                        const active =
+                          path === '/' ? pathname === '/' : pathname.startsWith(path);
+                        return (
+                          <li key={`${group.label}-${item.href}`}>
+                            <Link
+                              href={item.href}
+                              aria-current={active ? 'page' : undefined}
+                              className={cn(
+                                'flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm',
+                                active
+                                  ? 'bg-brand-50 font-medium text-brand-700'
+                                  : 'text-slate-600 hover:bg-slate-50',
+                              )}
+                            >
+                              {item.icon && (
+                                <Icon
+                                  name={item.icon}
+                                  className="h-4 w-4 text-brand-600"
+                                />
+                              )}
+                              {item.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+
             <li className="mt-2">
               <Link href="/ppdb" className="btn-primary w-full">
                 Info PPDB

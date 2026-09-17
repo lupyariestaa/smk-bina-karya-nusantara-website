@@ -184,7 +184,7 @@ export default function HomePage() {
       </section>
 
       {/* PRESTASI */}
-      <section className="section bg-slate-50">
+      <section id="prestasi" className="section scroll-mt-24 bg-slate-50">
         <div className="container-content">
           <SectionHeading
             eyebrow="Prestasi"

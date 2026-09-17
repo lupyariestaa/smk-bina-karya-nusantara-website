@@ -51,11 +51,21 @@ const config: Config = {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '200% 50%' },
         },
+        'dropdown-in': {
+          '0%': { opacity: '0', transform: 'translateY(8px) scale(0.98)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        'menu-in': {
+          '0%': { opacity: '0', transform: 'translateY(-6px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.5s ease-out both',
         shine: 'shine 4.5s ease-in-out infinite',
         'shine-border': 'shine-border 6s linear infinite',
+        'dropdown-in': 'dropdown-in 0.18s ease-out both',
+        'menu-in': 'menu-in 0.2s ease-out both',
       },
     },
   },
